@@ -92,6 +92,7 @@ Typography
 
 # Credits
     * Gitignore generated via [ChatGPT](https://chatgpt.com)
+    * Index.html template was copied and modified from previous [Best Barber project](https://github.com/bics/BestBarber)
 
 ### Code
 
