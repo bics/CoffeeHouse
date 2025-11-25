@@ -91,6 +91,7 @@ Typography
 ### Clone a repository with Sourcetree
 
 # Credits
+    * Gitignore generated via [ChatGPT](https://chatgpt.com)
 
 ### Code
 
