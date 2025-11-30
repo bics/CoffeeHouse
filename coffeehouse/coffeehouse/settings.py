@@ -48,6 +48,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Snippet taken from W3Dschools https://www.w3schools.com/django/django_static_whitenoise.php
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'coffeehouse.urls'
@@ -116,6 +118,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# snippet taken from W3Dschools https://www.w3schools.com/django/django_collect_static_files.php
+STATIC_ROOT = BASE_DIR / 'productionfiles'
+
+# snippet taken from W3Dschools https://www.w3schools.com/django/django_add_global_static_files.php
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
