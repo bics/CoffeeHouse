@@ -1,3 +1,4 @@
 body {
-    background: url("../assets/images/coffee_interior.png")
+    background: url("../assets/images/coffee_interior.png") no-repeat center center;
+    background-size: cover;
 }
