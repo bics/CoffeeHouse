@@ -1,1 +1,1 @@
-web: gunicorn coffeehouse.coffeehouse.wsgi
+web: gunicorn coffeehouse.wsgi
