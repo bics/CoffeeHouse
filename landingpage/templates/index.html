@@ -6,15 +6,17 @@ Coffee House
 
 {% block main %}
 <h1>H1 Tag</h1>
-<div>
-    <form action="POST">
-        <label for="email">Email</label><br>
-        <input type="email" id="email"><br>
-        <label for="password">Password</label><br>
-        <input type="text" id="password"><br>
-        <a href="">Not registered yet?</a><br>
-        <hr>
-        <input type="submit" value="Login">
+<div id="login-container" class="middle-form">
+    <form id="login-form" action="POST">
+        <label for="email" class="w-100 text-center">Email</label><br>
+        <input type="email" id="email" class="form-control-lg" placeholder="example@email.com"><br>
+        <label for="password" class="w-100 text-center">Password</label><br>
+        <input type="text" id="password" class="form-control-lg" placeholder="password"><br>
+        <div class="w-100 text-center">
+            <a href="">Not registered yet?</a><br>
+            <hr>
+            <input type="submit" value="Login">
+        </div>
     </form>
 </div>
 {% endblock %}

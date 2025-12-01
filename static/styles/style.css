@@ -2,6 +2,7 @@ header {
     width: 100%;
 }
 body {
+    min-height: 100vh;
     background: url("../assets/images/coffee_interior.png") no-repeat center center;
     background-size: cover;
 }
@@ -9,4 +10,14 @@ body {
 footer {
     width: 100%;
     bottom: 0;
+}
+
+.middle-form {
+    justify-self: center;
+    background-color: beige;
+    padding: 10px;
+}
+
+#login-form input {
+    margin: 0 0 10px;
 }
