@@ -7,7 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Title-->
-    <title>Coffee House</title>
+    <title>{% block title %} {% endblock %}</title>
+    <!-- Coffee House -->
     <!--TODO
         -Add overridable css blocks
     -->
@@ -16,6 +17,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    {% block css %}{% endblock %}
 </head>
 
 <body>
@@ -36,8 +38,7 @@
     -->
     <!--Main body content-->
     <main class="content-body">
-        <h1>H1 tag</h1>
-        <p>The P tag</p>
+        {% block main %} {% endblock %}
     </main>
 
     <!--Footer-->
@@ -58,6 +59,7 @@
         -Add overridable js blocks
     -->
     <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
+    {% block scripts %} {% endblock %}
 </body>
 
 </html>
