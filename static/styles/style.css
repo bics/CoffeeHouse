@@ -1,4 +1,12 @@
+header {
+    width: 100%;
+}
 body {
     background: url("../assets/images/coffee_interior.png") no-repeat center center;
     background-size: cover;
+}
+
+footer {
+    width: 100%;
+    bottom: 0;
 }
