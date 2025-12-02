@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Coffee House | Create a user
+{% endblock %}
+
+{% block main %}
+<h1>H1 Tag</h1>
+<div id="login-container" class="middle-form">
+    <form id="login-register" action="POST">
+        {% csrf_token %}
+        {{ form }}
+        <div class="w-100 text-center">
+            <hr>
+            <input type="submit" value="Login">
+        </div>
+    </form>
+</div>
+{% endblock %}
