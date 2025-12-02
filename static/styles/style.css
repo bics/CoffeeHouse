@@ -18,6 +18,6 @@ footer {
     padding: 10px;
 }
 
-#login-form input {
+#login-form, #register-form input {
     margin: 0 0 10px;
 }
