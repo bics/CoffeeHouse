@@ -8,9 +8,9 @@ Coffee House | Create a user
 <!-- Registration form done following a Django tutorial by Dave Gray https://www.youtube.com/watch?v=DIFaOkxy6TE-->
 <h1>H1 Tag</h1>
 <div id="login-container" class="middle-form">
-    <form id="register-form" action="POST" class="w-100 text-center">
+    <form id="register-form" method="POST" class="w-100 text-center">
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
 
         <div class="w-100 text-center">
             <hr>
