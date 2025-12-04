@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import RegisterForm
+from django.contrib.auth import authenticate
 
 # Create your views here.
 # view created following tutorial made by Codemy.com https://www.youtube.com/watch?v=HdrOcreAXKk
