@@ -8,9 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Title-->
     <title>{% block title %} {% endblock %}</title>
-    <!--TODO
-        -Add overridable css blocks
-    -->
+    
     <!--Bootstrap CSS, snippet taken from official bootstrap site-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -32,9 +30,6 @@
         </nav>
     </header>
 
-    <!--TODO
-        -Add overridable blocks
-    -->
     <!--Main body content-->
     <main class="content-body">
         {% block main %} {% endblock %}
@@ -53,10 +48,6 @@
         </nav>
     </footer>
 
-
-    <!--TODO
-        -Add overridable js blocks
-    -->
     <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
     {% block scripts %} {% endblock %}
 </body>
