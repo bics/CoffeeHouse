@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
 from django.contrib.auth import authenticate
+from django.contrib import messages
 
 # Create your views here.
 # view created following tutorial made by Codemy.com https://www.youtube.com/watch?v=HdrOcreAXKk
@@ -16,6 +17,9 @@ def register(request):
             #login(request, user)
             #message
             return redirect('home')
+        else:
+            messages.success(request, ("There were some errors with some fields"))
+            return redirect('register')
     else:
         form = RegisterForm()
     return render(request, "authentication/register.html", { "form": form})
