@@ -18,6 +18,14 @@ class CoffeeTable(models.Model):
 
     def __str__(self):
         return self.name
+    
+class reply(models.Model):
+    message = models.TextField(max_length=255)
+    createdBy = models.ForeignKey()
+    time = models.DateTimeField(editable=False, auto_now=True, auto_now_add=True)
+    
+    def __str__(self):
+        return self.message + ' ' + self.createdBy
 
 
 
