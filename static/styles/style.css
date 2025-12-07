@@ -18,6 +18,11 @@ footer {
     padding: 10px;
 }
 
+.table_image {
+    width: 10vh;
+    height: 10vh;
+}
+
 #login-form, #register-form input {
     margin: 0 0 10px;
 }
