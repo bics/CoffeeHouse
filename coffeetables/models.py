@@ -8,8 +8,8 @@ User = get_user_model()
     
 class Reply(models.Model):
     message = models.TextField(max_length=255)
-    createdBy = models.ForeignKey()
-    time = models.DateTimeField(editable=False, auto_now=True, auto_now_add=True)
+    createdBy = models.ForeignKey(User, blank=True, on_delete=models.RESTRICT)
+    time = models.DateTimeField(editable=False, auto_now_add=True)
     
     def __str__(self):
         return self.message + ' ' + self.createdBy
