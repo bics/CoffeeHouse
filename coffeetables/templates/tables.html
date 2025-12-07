@@ -8,13 +8,16 @@ Coffee House | Lobby
 <h1>H1 Tag</h1>
 <div>
     {% for table in tables_list %}
-    <div>
+    <div class="coffee-table">
         <h2>{{table.name}}</h2>
-        <div>
-            <img src="{{ table.image }}" class="table_image" alt="">
-        </div>
-        <div>
-            {{table.description}}
+        <hr>
+        <div class="table-content">
+            <div class="table-image">
+                <img src="{{ table.image }}" class="table-image" alt="">
+            </div>
+            <div class="table-description">
+                {{table.description}}
+            </div>
         </div>
     </div>
     {% endfor %}
