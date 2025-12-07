@@ -23,7 +23,7 @@ footer {
     margin: 10px;
 }
 
-.table-image {
+.table-image, .image-tile {
     width: 10vh;
     height: 10vh;
 }
@@ -34,6 +34,14 @@ footer {
 
 .table-description{
     margin-left: 10px;
+}
+
+.image-tile {
+    background-image: url("../assets/images/coffee_grounds.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
 }
 
 #login-form, #register-form input {

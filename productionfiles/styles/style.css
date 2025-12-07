@@ -18,6 +18,24 @@ footer {
     padding: 10px;
 }
 
+.coffee-table{
+    background-color: beige;
+    margin: 10px;
+}
+
+.table-image {
+    width: 10vh;
+    height: 10vh;
+}
+
+.table-content{
+    display: flex;
+}
+
+.table-description{
+    margin-left: 10px;
+}
+
 #login-form, #register-form input {
     margin: 0 0 10px;
 }

@@ -40,11 +40,15 @@ Coffee House | Lobby
                         <input type="text" id="title" name="title" class="form-control-lg" placeholder="title"><br>
                         <label for="description" class="w-100">Description</label><br>
                         <input type="text" id="description" name="description" class="form-control-lg" placeholder="description"><br>
-                        <select class="form-select" name="image-select" id="image-select">
+                        <div class="form-check">
+                            <!--<img src="static/assets/images/table_images/coffee_drank.jpg" alt="">-->
                             {% for image in images_list %}
-                            <option value=""></option>
+                            <!--<option value="image"><img src="{{image}}" alt=""></option>-->
+                            <div class="image-tile" style="background-image: url('{{image}}');">
+                                <input type="checkbox" class="form-check-input" id="image-{{forloop.counter}}" value="{{image}}">
+                            </div>
                             {% endfor %}
-                        </select>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
