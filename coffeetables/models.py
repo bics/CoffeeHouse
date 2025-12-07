@@ -12,7 +12,7 @@ class Reply(models.Model):
     time = models.DateTimeField(editable=False, auto_now_add=True)
     
     def __str__(self):
-        return self.message + ' ' + self.createdBy.__str__()
+        return self.message + ' ' + self.createdBy.__str__() + ' ' + self.time.isoformat()
     
 
 # model inspired by tutorial made by Codemy.com
