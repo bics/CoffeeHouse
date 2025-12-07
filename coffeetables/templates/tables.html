@@ -41,9 +41,7 @@ Coffee House | Lobby
                         <label for="description" class="w-100">Description</label><br>
                         <input type="text" id="description" name="description" class="form-control-lg" placeholder="description"><br>
                         <div class="form-check">
-                            <!--<img src="static/assets/images/table_images/coffee_drank.jpg" alt="">-->
                             {% for image in images_list %}
-                            <!--<option value="image"><img src="{{image}}" alt=""></option>-->
                             <div class="image-tile" style="background-image: url('{{image}}');">
                                 <input type="checkbox" class="form-check-input" id="image-{{forloop.counter}}" value="{{image}}">
                             </div>
