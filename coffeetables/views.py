@@ -6,4 +6,5 @@ from .models import CoffeeTable
 # view created following tutorial made by Codemy.com
 def tables(request):
     tables_list = CoffeeTable.objects.all()
-    return render(request, "tables.html", {'tables_list':tables_list})
+    images_list = None
+    return render(request, "tables.html", {'tables_list':tables_list, 'images_list': images_list})

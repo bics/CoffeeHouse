@@ -5,8 +5,9 @@ Coffee House | Lobby
 {% endblock %}
 
 {% block main %}
-<h1>H1 Tag</h1>
+<button data-bs-toggle="modal" data-bs-target="#exampleModal">Grab a table</button>
 <div>
+    <!--TODO transform into Bootstrap cards-->
     {% for table in tables_list %}
     <div class="coffee-table">
         <h2>{{table.name}}</h2>
@@ -21,5 +22,37 @@ Coffee House | Lobby
         </div>
     </div>
     {% endfor %}
+</div>
+
+<!--Code snippet taken and modified from official Bootsrap documentation https://getbootstrap.com/docs/5.0/components/modal/-->
+<div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Grab a table</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">                    
+                        {% csrf_token %}
+                        <label for="title" class="w-100">Title</label><br>
+                        <input type="text" id="title" name="title" class="form-control-lg" placeholder="title"><br>
+                        <label for="description" class="w-100">Description</label><br>
+                        <input type="text" id="description" name="description" class="form-control-lg" placeholder="description"><br>
+                        <select class="form-select" name="image-select" id="image-select">
+                            {% for image in images_list %}
+                            <option value=""></option>
+                            {% endfor %}
+                        </select>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

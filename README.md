@@ -97,6 +97,8 @@ Typography
 
 ### Code
 
+    * Modal snippet taken and modified from official Bootsrap documentation https://getbootstrap.com/docs/5.0/components/modal/-->
+
 ### Content
 
 ### Media
