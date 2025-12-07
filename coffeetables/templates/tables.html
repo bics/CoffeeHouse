@@ -7,8 +7,8 @@ Coffee House | Lobby
 {% block main %}
 <h1>H1 Tag</h1>
 <div>
-    {% for tables in CoffeeTables %}
-        
+    {% for table in tables_list %}
+        {{table}}
     {% endfor %}
 </div>
 {% endblock %}
