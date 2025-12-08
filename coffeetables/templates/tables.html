@@ -41,10 +41,11 @@ Coffee House | Lobby
                         <label for="description" class="w-100">Description</label><br>
                         <input type="text" id="description" name="description" class="form-control-lg" placeholder="description"><br>
                         <div class="">
+                            <!--Code snippet semi-generated using ChatGPT-->
                             {% for image in images_list %}
-                            <div class="image-tile" style="background-image: url('{{image}}');">
-                                <input type="radio" name="image-selector" class="form-check-input" id="image-{{forloop.counter}}" value="{{image}}">
-                            </div>
+                            <input type="radio" name="image-selector" id="image-{{ forloop.counter }}" value="{{ image }}" class="d-none">
+                            <label for="image-{{ forloop.counter }}" class="image-tile"
+                                style="background-image: url('{{image}}');"></label>
                             {% endfor %}
                         </div>
                     </form>
