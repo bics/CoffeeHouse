@@ -11,12 +11,7 @@ class CoffeeTableForm(ModelForm):
         # Code snippet generated from ChatGPT
         # This prevents Django from rendering its own <select>
         widgets = {
+            "name": forms.TextInput(attrs={'class':'form-control', 'placeholder': 'Name your table'}),
+            "description": forms.TextInput(attrs={'class':'form-control', 'placeholder': 'Describe'}),
             "image": forms.HiddenInput(),  # or TextInput()
         }
-
-    def __init__(self, *args, **kwargs):
-        super(CoffeeTableForm, self).__init__(*args, **kwargs)
-        self.fields['name'].widget.attrs['class'] = 'form-control'
-        self.fields['name'].widget.attrs['placeholder'] = 'Name your table'
-        self.fields['description'].widget.attrs['class'] = 'form-control'
-        self.fields['description'].widget.attrs['placeholder'] = 'Describe'
