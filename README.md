@@ -102,6 +102,7 @@ Typography
         * tables.html image selector for new table creation
         * Styling for the above image selector
         * Hiding form field when creating new tables
+        * Auto updating form with logged in user
 
 ### Content
 

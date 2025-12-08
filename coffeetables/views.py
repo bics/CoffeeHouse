@@ -16,7 +16,11 @@ def tables(request):
     if request.method == "POST":
         form = CoffeeTableForm(request.POST)
         if form.is_valid():
-            form.save()
+            # Code snippet generated using ChatGPT
+            obj = form.save(commit=False)
+            obj.createdBy= request.user
+            obj.save()
+            form.save_m2m()
             return redirect('tables')    
         else:            
             messages.success(request, ("There were some errors with some fields"))

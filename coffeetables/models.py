@@ -1,6 +1,6 @@
 from django.db import models
 
-# Snipper taken from ChatGPT
+# Snippet taken from ChatGPT
 from django.contrib.auth import get_user_model
 User = get_user_model()
 
@@ -20,10 +20,10 @@ class CoffeeTable(models.Model):
     name = models.CharField(max_length=255)
     image = models.CharField(blank=True) # TODO add enum for available images or from html select
     description = models.CharField(max_length=255)
-    participants = models.ManyToManyField(User, blank=True)
     replies = models.ManyToManyField(Reply, blank=True)
+    createdBy = models.ForeignKey(User, null=True, blank=True, on_delete=models.RESTRICT, related_name="table_creator")
+    participants = models.ManyToManyField(User, blank=True, related_name="table_participant")
     # TODO implement other fields
-    # createdBy
     # time
 
     def __str__(self):
