@@ -40,7 +40,7 @@ Coffee House | Lobby
                         <input type="text" id="title" name="title" class="form-control-lg" placeholder="title"><br>
                         <label for="description" class="w-100">Description</label><br>
                         <input type="text" id="description" name="description" class="form-control-lg" placeholder="description"><br>
-                        <div class="form-check">
+                        <div class="">
                             {% for image in images_list %}
                             <div class="image-tile" style="background-image: url('{{image}}');">
                                 <input type="radio" name="image-selector" class="form-check-input" id="image-{{forloop.counter}}" value="{{image}}">
