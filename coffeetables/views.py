@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, redirect
 from .models import CoffeeTable
 from .forms import CoffeeTableForm
 from django.contrib import messages
@@ -17,7 +17,7 @@ def tables(request):
         form = CoffeeTableForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, "tables.html", {'tables_list':tables_list, 'images_list': images_list, 'form': form})    
+            return redirect('tables')    
         else:            
             messages.success(request, ("There were some errors with some fields"))
     else:
