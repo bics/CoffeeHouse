@@ -27,3 +27,6 @@ def tables(request):
     else:
         form = CoffeeTableForm
         return render(request, "tables.html", {'tables_list':tables_list, 'images_list': images_list, 'form': form})
+    
+def conversation(request):
+    return render(request, "conversation.html")
