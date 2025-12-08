@@ -21,13 +21,12 @@ class CoffeeTable(models.Model):
     image = models.CharField(blank=True) # TODO add enum for available images or from html select
     description = models.CharField(max_length=255)
     replies = models.ManyToManyField(Reply, blank=True)
-    createdBy = models.ForeignKey(User, null=True, blank=True, on_delete=models.RESTRICT, related_name="table_creator")
+    createdBy = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="table_creator")
     participants = models.ManyToManyField(User, blank=True, related_name="table_participant")
+    time = models.DateTimeField(editable=False, auto_now_add=True)
     # TODO implement other fields
-    # time
-
     def __str__(self):
-        return self.name
+        return self.name + ' by ' + self.createdBy.username  + ' at ' + self.time.isoformat()
 
 
 
