@@ -28,5 +28,7 @@ def tables(request):
         form = CoffeeTableForm
         return render(request, "tables.html", {'tables_list':tables_list, 'images_list': images_list, 'form': form})
     
-def conversation(request):
-    return render(request, "conversation.html")
+def conversation(request, pk):
+    # Code snippet generated using ChatGPT
+    table = CoffeeTable.objects.get(pk=pk)
+    return render(request, "conversation.html", {"table": table} )

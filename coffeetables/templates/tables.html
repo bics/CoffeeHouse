@@ -20,7 +20,7 @@ Coffee House | Lobby
                 {{table.description}}
             </div>
             <div>
-                <button><a href="{% url 'conversation' table.name %}">Join</a></button>
+                <a class="btn btn-secondary" href="{% url 'conversation' table.id %}">Join</a>
             </div>
         </div>
     </div>
