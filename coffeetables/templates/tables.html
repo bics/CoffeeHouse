@@ -43,7 +43,7 @@ Coffee House | Lobby
                         <div class="form-check">
                             {% for image in images_list %}
                             <div class="image-tile" style="background-image: url('{{image}}');">
-                                <input type="checkbox" class="form-check-input" id="image-{{forloop.counter}}" value="{{image}}">
+                                <input type="radio" name="image-selector" class="form-check-input" id="image-{{forloop.counter}}" value="{{image}}">
                             </div>
                             {% endfor %}
                         </div>
