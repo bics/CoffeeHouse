@@ -101,6 +101,7 @@ Typography
     * Snippets generated using Chatgpt:
         * tables.html image selector for new table creation
         * Styling for the above image selector
+        * Hiding form field when creating new tables
 
 ### Content
 
