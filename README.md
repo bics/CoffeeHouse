@@ -105,6 +105,7 @@ Typography
         * Hiding form field when creating new tables
         * Auto updating form with logged in user
         * Snippet to pass on table for conversations view
+        * Custom admin user register for site
 
 ### Content
 
@@ -123,6 +124,8 @@ coffee_mug_tilted : https://www.freepik.com/free-vector/coffee-cup-cartoon-vecto
 coffee_separated : https://www.freepik.com/free-photo/coffee-beans-top-view-white-background-space-text_8060692.htm#fromView=search&page=2&position=39&uuid=c749efba-f08b-4b9c-ad49-001cd20ad639&query=coffee
 
 coffee_separated_nobg : modified in Canva
+
+avatars.jpg : https://www.freepik.com/free-vector/profile-icons-pack-hand-drawn-style_18156023.htm#fromView=search&page=1&position=7&uuid=80e53d81-6ddc-4bcb-9e26-615757ec447a&query=avatar
 
 # Acknowledgements
 

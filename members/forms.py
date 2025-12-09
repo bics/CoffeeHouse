@@ -1,13 +1,13 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
+from .models import CoffeeDrinker
 
 # class created following tutorial made by Codemy.com 
 class RegisterForm(UserCreationForm):
     email = forms.EmailField(max_length=50,widget=forms.EmailInput(attrs={'class':'form-control', 'placeholder': 'example@email.com'}))
 
     class Meta:
-        model = User
+        model = CoffeeDrinker
         fields = ('username', 'email', 'password1', 'password2')
 
     def __init__(self, *args, **kwargs):
