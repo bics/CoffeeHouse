@@ -97,7 +97,8 @@ Typography
 
 ### Code
 
-    * Modal snippet taken and modified from official Bootsrap documentation https://getbootstrap.com/docs/5.0/components/modal/
+    * Modal code block taken and modified from official Bootsrap documentation https://getbootstrap.com/docs/5.0/components/modal/
+    * Card code block taken from official Bootstrap documentation for cards https://getbootstrap.com/docs/5.3/components/card/
     * Snippets generated using Chatgpt:
         * tables.html image selector for new table creation
         * Styling for the above image selector
