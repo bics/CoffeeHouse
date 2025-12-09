@@ -31,4 +31,5 @@ def tables(request):
 def conversation(request, pk):
     # Code snippet generated using ChatGPT
     table = CoffeeTable.objects.get(pk=pk)
-    return render(request, "conversation.html", {"table": table} )
+    replies = table.replies.all()
+    return render(request, "conversation.html", {"table": table, "replies": replies} )
