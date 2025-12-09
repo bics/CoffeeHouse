@@ -6,7 +6,19 @@ Coffee House | {{table.name}}
 
 {% block main %}
 <div>
-    <h1>{{table.name}}</h1>
+    <div>
+        <h1>{{table.name}}</h1>
+    </div>
+    <hr>
+    <div>
+        {% if not replies %}
+            <h2>There are no replies yet.</h2>
+        {% else %}
+            {% for reply in replies %}
+                {{ reply }}
+            {% endfor %}
+        {% endif %}
+    </div>
 </div>
 
 {% endblock %}
