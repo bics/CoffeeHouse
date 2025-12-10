@@ -5,25 +5,28 @@ Coffee House | Lobby
 {% endblock %}
 
 {% block main %}
-<button data-bs-toggle="modal" data-bs-target="#exampleModal">Grab a table</button>
-<div>
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning m-2">Grab a table</button>
+    </div>
+
     <!--TODO transform into Bootstrap cards-->
     {% for table in tables_list %}
-    <div class="coffee-table light-background">
-        <h2>{{table.name}}</h2>
-        <hr>
-        <div class="table-content">
-            <div class="table-image">
-                <img src="{{ table.image }}" class="table-image" alt="">
-            </div>
-            <div class="table-description">
-                {{table.description}}
-            </div>
-            <div>
-                <a class="btn btn-secondary" href="{% url 'conversation' table.id %}">Join</a>
+    <div class="card mb-3 light-background">
+            <div class="row g-0">
+                <div class="col-sm-2">
+                    <img src="{{ table.image }}" class="img-fluid rounded-start" alt="avatar">
+                </div>
+                <div class="col-sm-10">
+                    <div class="card-body color-espresso">
+                        <h5 class="card-title">{{table.name}}</h5>
+                        <hr>
+                        <p class="card-text color-espresso">{{table.description}}</p>
+                        <a class="btn btn-secondary" href="{% url 'conversation' table.id %}">Join</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
     {% endfor %}
 </div>
 
