@@ -23,8 +23,12 @@ footer {
     bottom: 0;
 }
 
+.color-espresso{
+    color: var(--espresso-colour);
+}
+
 .dark-background{
-    background-color: var(--dominant-background-color);
+    background-color: var(--espresso-colour);
 }
 
 .light-background{
