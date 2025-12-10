@@ -1,10 +1,21 @@
+:root{
+    --dominant-background-color: #110D06;
+    --intermediate-background-color: #EED7B5;
+    --espresso-colour : #3B2F2F;
+    --vibrant-coral-colour: #F27059;
+}
+
+*{
+    color: var(--vibrant-coral-colour);
+}
+
 header {
     width: 100%;
 }
 body {
     min-height: 100vh;
     background: url("../assets/images/coffee_interior.png") no-repeat center center;
-    background-size: cover;
+    background-size: cover;    
 }
 
 footer {
@@ -12,14 +23,20 @@ footer {
     bottom: 0;
 }
 
+.dark-background{
+    background-color: var(--dominant-background-color);
+}
+
+.light-background{
+    background-color: var(--intermediate-background-color);
+}
+
 .middle-form {
     justify-self: center;
-    background-color: beige;
     padding: 10px;
 }
 
 .coffee-table{
-    background-color: beige;
     margin: 10px;
 }
 
