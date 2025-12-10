@@ -23,6 +23,10 @@ footer {
     bottom: 0;
 }
 
+.coral-color{
+    color: var(--vibrant-coral-colour);
+}
+
 .color-espresso{
     color: var(--espresso-colour);
 }
