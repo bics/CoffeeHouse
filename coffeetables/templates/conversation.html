@@ -25,6 +25,7 @@ Coffee House | {{table.name}}
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">{{reply.createdBy}}</h5>
+                                <hr>
                                 <p class="card-text">{{reply.message}}</p>
                                 <p class="card-text"><small class="text-body-secondary">{{reply.time}}</small></p>
                             </div>
@@ -37,6 +38,7 @@ Coffee House | {{table.name}}
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">{{reply.createdBy}}</h5>
+                                <hr>
                                 <p class="card-text">{{reply.message}}</p>
                                 <p class="card-text"><small class="text-body-secondary">{{reply.time}}</small></p>
                             </div>
@@ -49,6 +51,7 @@ Coffee House | {{table.name}}
                 {% endif %}
             {% endfor %}
         {% endif %}
+        <button>Reply</button>
     </div>
 </div>
 
