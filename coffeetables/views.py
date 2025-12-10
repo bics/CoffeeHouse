@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import CoffeeTable
-from .forms import CoffeeTableForm
+from .forms import CoffeeTableForm, ReplyForm
 from django.contrib import messages
 
 # Create your views here.
@@ -25,11 +25,25 @@ def tables(request):
         else:            
             messages.success(request, ("There were some errors with some fields"))
     else:
-        form = CoffeeTableForm
+        form = CoffeeTableForm()
         return render(request, "tables.html", {'tables_list':tables_list, 'images_list': images_list, 'form': form})
     
 def conversation(request, pk):
     # Code snippet generated using ChatGPT
     table = CoffeeTable.objects.get(pk=pk)
     replies = table.replies.all()
-    return render(request, "conversation.html", {"table": table, "replies": replies} )
+
+    if request.method == "POST":
+        form = ReplyForm(request.POST)
+        if form.is_valid():
+            obj = form.save(commit=False)
+            obj.createdBy= request.user
+            obj.save()
+            table.replies.add(obj)
+            return redirect('conversation', table.id) 
+        else:            
+            messages.success(request, ("There were some errors with some fields"))
+    else:
+        form = ReplyForm()
+        return render(request, "conversation.html", {"table": table, "replies": replies, "form": form} )
+

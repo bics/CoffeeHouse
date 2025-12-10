@@ -27,7 +27,12 @@ Coffee House | {{table.name}}
         <div class="card mb-3 light-background">
             <div class="row g-0">
                 <div class="col-sm-2">
-                    <img src="{{reply.createdBy.avatar.url}}" class="img-fluid rounded-start" alt="...">
+                    <!--Code block generated using ChatGPT-->
+                    {% if reply.createdBy.avatar %}
+                    <img src="{{ reply.createdBy.avatar.url }}" class="img-fluid rounded-start" alt="avatar">
+                    {% else %}
+                    <img src="/static/assets/avatar_images/avatar_empty.png" class="img-fluid rounded-start" alt="no avatar">
+                    {% endif %}
                 </div>
                 <div class="col-sm-10">
                     <div class="card-body color-espresso">
@@ -51,7 +56,11 @@ Coffee House | {{table.name}}
                     </div>
                 </div>
                 <div class="col-sm-2">
-                    <img src="{{reply.createdBy.avatar.url}}" class="img-fluid rounded-start" alt="...">
+                    {% if reply.createdBy.avatar %}
+                    <img src="{{ reply.createdBy.avatar.url }}" class="img-fluid rounded-start" alt="avatar">
+                    {% else %}
+                    <img src="/static/assets/avatar_images/avatar_empty.png" class="img-fluid rounded-start" alt="no avatar">
+                    {% endif %}
                 </div>
             </div>
         </div>

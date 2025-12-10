@@ -106,6 +106,7 @@ Typography
         * Auto updating form with logged in user
         * Snippet to pass on table for conversations view
         * Custom admin user register for site
+        * Error handling for replies, when users have no pictures
     * Code inspired from playlist created by Codemy.com https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy
         * 
 
@@ -128,6 +129,8 @@ coffee_separated : https://www.freepik.com/free-photo/coffee-beans-top-view-whit
 coffee_separated_nobg : modified in Canva
 
 avatars.jpg : https://www.freepik.com/free-vector/profile-icons-pack-hand-drawn-style_18156023.htm#fromView=search&page=1&position=7&uuid=80e53d81-6ddc-4bcb-9e26-615757ec447a&query=avatar
+
+empty_avatar : https://www.freepik.com/free-vector/blank-user-circles_134996379.htm#fromView=search&page=1&position=1&uuid=f8d57935-e0cc-4c71-9735-a9e8336ee67e&query=empty+avatar
 
 # Acknowledgements
 
