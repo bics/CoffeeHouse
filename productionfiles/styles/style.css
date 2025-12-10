@@ -1,10 +1,21 @@
+:root{
+    --dominant-background-color: #110D06;
+    --intermediate-background-color: #EED7B5;
+    --espresso-colour : #3B2F2F;
+    --vibrant-coral-colour: #F27059;
+}
+
+*{
+    color: var(--vibrant-coral-colour);
+}
+
 header {
     width: 100%;
 }
 body {
     min-height: 100vh;
     background: url("../assets/images/coffee_interior.png") no-repeat center center;
-    background-size: cover;
+    background-size: cover;    
 }
 
 footer {
@@ -12,18 +23,32 @@ footer {
     bottom: 0;
 }
 
+.coral-color{
+    color: var(--vibrant-coral-colour);
+}
+
+.color-espresso{
+    color: var(--espresso-colour);
+}
+
+.dark-background{
+    background-color: var(--espresso-colour);
+}
+
+.light-background{
+    background-color: var(--intermediate-background-color);
+}
+
 .middle-form {
     justify-self: center;
-    background-color: beige;
     padding: 10px;
 }
 
 .coffee-table{
-    background-color: beige;
     margin: 10px;
 }
 
-.table-image {
+.table-image, .image-tile {
     width: 10vh;
     height: 10vh;
 }
@@ -36,6 +61,39 @@ footer {
     margin-left: 10px;
 }
 
+/* Below three entries generated using ChatGPT */
+.image-tile {
+    background-image: url("../assets/images/coffee_grounds.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: inline-block;
+    margin: 4px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.image-tile:hover {
+    border-color: #aaa;
+    transform: scale(1.02);
+}
+
+.espresso-border-color{
+    border-color: var(--espresso-colour);
+}
+
+input[type="radio"]:checked + .image-tile {
+    border-color: #0d6efd; /* or whatever you like */
+}
+
 #login-form, #register-form input {
     margin: 0 0 10px;
 }
+
+#home-nav-element{
+    padding-right: 10px;
+    border-right: 2px solid var(--vibrant-coral-colour);
+}
+
