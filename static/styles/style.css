@@ -87,3 +87,8 @@ input[type="radio"]:checked + .image-tile {
 #login-form, #register-form input {
     margin: 0 0 10px;
 }
+
+#home-nav-element{
+    padding-right: 10px;
+    border-right: 2px solid var(--vibrant-coral-colour);
+}
