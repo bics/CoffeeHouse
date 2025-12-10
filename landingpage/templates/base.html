@@ -22,11 +22,17 @@
         -Fix links    
     -->
     <!--Navigation header-->
-    <header class="navbar">
-        <nav class="container-fluid navbar d-flex flex-row justify-content-around">
-            <a class="nav-item coral-color" href="index.html">Home</a>
-            <a class="nav-item coral-color" href="gallery.html">Gallery</a>
-            <a class="nav-item coral-color" href="contact-us.html">Contact Us</a>
+    <header class="navbar mb-5">
+        <nav class="container-fluid navbar fixed-top dark-background">
+            <div class="flex-row container-fluid">
+                <div>
+                    <a class="navbar-brand coral-color" href="">Home</a>
+                    {% block nav %}{% endblock %}
+                </div>
+                <div>
+                    <a class="nav-item coral-color" href="">Account</a>
+                </div>
+            </div>
         </nav>
     </header>
 
