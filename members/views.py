@@ -7,7 +7,7 @@ from django.contrib import messages
 # view created following tutorial made by Codemy.com https://www.youtube.com/watch?v=HdrOcreAXKk
 def register(request):
     if request.method == "POST":
-        form = RegisterForm(request.POST)
+        form = RegisterForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             username = form.cleaned_data['username']
