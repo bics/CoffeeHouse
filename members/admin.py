@@ -7,4 +7,17 @@ from .models import CoffeeDrinker
 # Register your models here.
 @admin.register(CoffeeDrinker)
 class CoffeeDrinkerAdmin(UserAdmin):
-    pass
+    
+    # For editing existing users
+    fieldsets = UserAdmin.fieldsets + (
+        ('avatar', {
+            'fields': ('avatar',),
+        }),
+    )
+
+    # For creating new users (the "Add user" form)
+    add_fieldsets = UserAdmin.add_fieldsets + (
+        ('avatar', {
+            'fields': ('avatar',),
+        }),
+    )
