@@ -106,6 +106,8 @@ Typography
         * Auto updating form with logged in user
         * Snippet to pass on table for conversations view
         * Custom admin user register for site
+    * Code inspired from playlist created by Codemy.com https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy
+        * 
 
 ### Content
 
