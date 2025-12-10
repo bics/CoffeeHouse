@@ -80,6 +80,10 @@ footer {
     transform: scale(1.02);
 }
 
+.espresso-border-color{
+    border-color: var(--espresso-colour);
+}
+
 input[type="radio"]:checked + .image-tile {
     border-color: #0d6efd; /* or whatever you like */
 }
@@ -92,3 +96,4 @@ input[type="radio"]:checked + .image-tile {
     padding-right: 10px;
     border-right: 2px solid var(--vibrant-coral-colour);
 }
+

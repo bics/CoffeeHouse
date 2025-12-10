@@ -61,8 +61,30 @@ Coffee House | {{table.name}}
     </div>
         <hr>
         <div class="container-fluid text-center">
-            <button class="btn btn-warning m-2">Reply</button>
+            <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning m-2">Reply</button>
         </div>
+</div>
+
+<div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content light-background">
+                <div class="modal-header espresso-border-color">
+                    <h5 class="modal-title color-espresso" id="exampleModalLabel">Send a Reply</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" method="POST">
+                    <div class="modal-body">
+                        {% csrf_token %}
+                        {{ form.as_p}}                        
+                    </div>
+                    <div class="modal-footer espresso-border-color">
+                        <button type="submit" class="btn btn-success">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
