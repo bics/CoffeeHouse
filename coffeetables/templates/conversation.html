@@ -4,6 +4,10 @@
 Coffee House | {{table.name}}
 {% endblock %}
 
+{% block nav %}
+    <a href="{% url 'tables' %}" class="nav-link coral-color align-self-center">Back to Tables</a>
+{% endblock %}
+
 {% block main %}
 <div class="dark-background container-md">
     <div class="container-fluid text-center">
