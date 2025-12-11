@@ -49,7 +49,7 @@ Coffee House | {{table.name}}
     </div>
         <hr>
         <div class="container-fluid text-center">
-            <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning m-2">Reply</button>
+            <button data-bs-toggle="modal" data-bs-target="#replyModal" class="btn btn-warning m-2">Reply</button>
 
             {% if user.id is table.createdBy.id %}  
                 <br>   
@@ -59,7 +59,7 @@ Coffee House | {{table.name}}
 </div>
 
 <div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="replyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content light-background">
                 <div class="modal-header espresso-border-color">
