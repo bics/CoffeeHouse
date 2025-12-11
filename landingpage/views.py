@@ -12,7 +12,7 @@ def home(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('home')
+            return redirect('tables')
         else:
             messages.success(request, ("Error while logging in"))
             return redirect('home')
