@@ -19,7 +19,7 @@ Coffee House | Lobby
                 </div>
                 <div class="col-md-10">
                     <div class="card-body color-espresso">
-                        <h5 class="card-title">{{table.name}}</h5>
+                        <h5 class="card-title">{{table.name}} by {{table.createdBy.username}}</h5>
                         <hr>
                         <p class="card-text color-espresso">{{table.description}}</p>
                         <a class="btn btn-success" href="{% url 'conversation' table.id %}">Join</a>
