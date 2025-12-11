@@ -26,11 +26,25 @@
         <nav class="container-fluid navbar fixed-top dark-background">
             <div class="flex-row container-fluid">
                 <div class="d-flex flex-row">
-                    <a id="home-nav-element" class="navbar-brand coral-color" href="{% url 'tables' %}">Home</a>
+                    <a id="home-nav-element" class="navbar-brand coral-color" href="{% url 'tables' %}">Home</a>                    
+                    <div class="dropdown align-self-center">
+                        <a class="navbar-brand coral-color dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Hi, {{user.username}}
+                
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            {% if user.avatar %}
+                            <li><img src="{{user.avatar.url}}" class="img-fluid rounded-start image-tile" alt="avatar"></li>
+                            {% else %}
+                            <img src="/static/assets/images/avatar_images/avatar_empty.png" class="img-fluid rounded-start image-tile"
+                                alt="no avatar">
+                            {% endif %}
+                            <a class="dropdown-item" href="#">Change Details</a>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
                     {% block nav %}{% endblock %}
-                </div>
-                <div>
-                    <a class="navbar-brand coral-color" href="">Account</a>
                 </div>
             </div>
         </nav>
@@ -53,8 +67,8 @@
     </main>
 
     <!--Footer-->
-    <footer class="footer-bottom">
-        <nav class="container-fluid navbar d-flex flex-row justify-content-around">
+    <footer class="mt-2">
+        <nav class="container-fluid navbar  dark-background d-flex flex-row justify-content-around">
             <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook homepage"><i
                     class="fa-brands fa-facebook"></i></a>
             <a href="https://www.x.com/" target="_blank" aria-label="X homepage"><i class="fa-solid fa-x"></i></a>
