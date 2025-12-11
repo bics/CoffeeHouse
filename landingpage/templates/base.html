@@ -26,22 +26,28 @@
         <nav class="container-fluid navbar fixed-top dark-background">
             <div class="flex-row container-fluid">
                 <div class="d-flex flex-row">
-                    <a id="home-nav-element" class="navbar-brand coral-color" href="{% url 'tables' %}">Home</a>                    
+                    <a id="home-nav-element" class="navbar-brand coral-color" href="{% url 'tables' %}">Home</a>   
+                    <!--Dropdown code block was taken from official Bootstrap documentation-->                 
                     <div class="dropdown align-self-center">
                         <a class="navbar-brand coral-color dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Hi, {{user.username}}
-                
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            {% if user.avatar %}
-                            <li><img src="{{user.avatar.url}}" class="img-fluid rounded-start image-tile" alt="avatar"></li>
-                            {% else %}
-                            <img src="/static/assets/images/avatar_images/avatar_empty.png" class="img-fluid rounded-start image-tile"
-                                alt="no avatar">
-                            {% endif %}
-                            <a class="dropdown-item" href="#">Change Details</a>
-                            <a class="dropdown-item" href="#">Logout</a>
+                            <!-- Code block taken from official Bootstrap documentation for cards https://getbootstrap.com/docs/5.3/components/card/-->
+                            <div class="card" style="width: 18rem;">
+                                {% if user.avatar %}
+                                <li><img src="{{user.avatar.url}}" class="img-fluid rounded-start card-img-top" alt="avatar"></li>
+                                {% else %}
+                                <img src="/static/assets/images/avatar_images/avatar_empty.png" class="img-fluid rounded-start card-img-top"
+                                    alt="no avatar">
+                                {% endif %}
+                                <div class="card-body">
+                                    <h5 class="card-title">{{user.username}}</h5>
+                                    <a class="dropdown-item" href="#">Change Details</a>
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     {% block nav %}{% endblock %}

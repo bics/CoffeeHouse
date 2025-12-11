@@ -99,6 +99,7 @@ Typography
 
     * Modal code block taken and modified from official Bootsrap documentation https://getbootstrap.com/docs/5.0/components/modal/
     * Card code block taken from official Bootstrap documentation for cards https://getbootstrap.com/docs/5.3/components/card/
+    * Dropdown menu code block taken from official Bootstrap documentation for dropdowns https://getbootstrap.com/docs/4.0/components/dropdowns/
     * Snippets generated using Chatgpt:
         * tables.html image selector for new table creation
         * Styling for the above image selector
