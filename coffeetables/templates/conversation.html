@@ -52,8 +52,8 @@ Coffee House | {{table.name}}
             <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning m-2">Reply</button>
 
             {% if user.id is table.createdBy.id %}  
-                <br>              
-                <a href="{% url 'close_table' table.id %}" type="button" class="btn btn-danger m-2">Close Table</a>
+                <br>   
+                <button class="btn btn-danger m-2" data-bs-toggle="modal" data-bs-target="#closeModal">Close Table</button>           
             {% endif %}
         </div>
 </div>
@@ -69,7 +69,7 @@ Coffee House | {{table.name}}
                 <form action="" method="POST">
                     <div class="modal-body">
                         {% csrf_token %}
-                        {{ form.as_p}}                        
+                        {{ form.as_p}}
                     </div>
                     <div class="modal-footer espresso-border-color">
                         <button type="submit" class="btn btn-success">Send</button>
@@ -80,4 +80,23 @@ Coffee House | {{table.name}}
     </div>
 </div>
 
-{% endblock %}
+<div>
+    <div class="modal fade" id="closeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content light-background">
+                <div class="modal-header espresso-border-color">
+                    <h5 class="modal-title color-espresso" id="exampleModalLabel">Close a Table</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">        
+                    <strong class="color-espresso">You are about to close the table, are you sure?</strong>
+                </div>
+                <div class="modal-footer espresso-border-color">
+                    <button class="btn btn-warning m-2 close" data-bs-dismiss="modal" aria-label="Cancel">Cancel</button>
+                    <a href="{% url 'close_table' table.id %}" type="button" class="btn btn-danger m-2">Close Table</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    {% endblock %}
