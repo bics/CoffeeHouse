@@ -51,8 +51,9 @@ Coffee House | {{table.name}}
         <div class="container-fluid text-center">
             <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning m-2">Reply</button>
 
-            {% if user.id is table.createdBy.id %}                
-                <br><button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger m-2">Close Table</button>
+            {% if user.id is table.createdBy.id %}  
+                <br>              
+                <a href="{% url 'close_table' table.id %}" type="button" class="btn btn-danger m-2">Close Table</a>
             {% endif %}
         </div>
 </div>

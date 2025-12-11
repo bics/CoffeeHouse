@@ -46,4 +46,10 @@ def conversation(request, pk):
     else:
         form = ReplyForm()
         return render(request, "conversation.html", {"table": table, "replies": replies, "form": form} )
+    
+def close_table(request, pk):    
+    table = CoffeeTable.objects.get(pk=pk)
+    table.active = False
+    table.save()
+    return redirect('tables')
 
