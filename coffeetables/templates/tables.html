@@ -12,21 +12,23 @@ Coffee House | Lobby
 
     <!--TODO transform into Bootstrap cards-->
     {% for table in tables_list %}
+    {% if table.active %}
     <div class="card mb-3 light-background">
-            <div class="row g-0">
-                <div class="col-md-2">
-                    <img src="{{ table.image }}" class="img-fluid rounded-start" alt="avatar">
-                </div>
-                <div class="col-md-10">
-                    <div class="card-body color-espresso">
-                        <h5 class="card-title">{{table.name}} by {{table.createdBy.username}}</h5>
-                        <hr>
-                        <p class="card-text color-espresso">{{table.description}}</p>
-                        <a class="btn btn-success" href="{% url 'conversation' table.id %}">Join</a>
-                    </div>
+        <div class="row g-0">
+            <div class="col-md-2">
+                <img src="{{ table.image }}" class="img-fluid rounded-start" alt="avatar">
+            </div>
+            <div class="col-md-10">
+                <div class="card-body color-espresso">
+                    <h5 class="card-title">{{table.name}} by {{table.createdBy.username}}</h5>
+                    <hr>
+                    <p class="card-text color-espresso">{{table.description}}</p>
+                    <a class="btn btn-success" href="{% url 'conversation' table.id %}">Join</a>
                 </div>
             </div>
         </div>
+    </div>
+    {% endif %}
     {% endfor %}
 </div>
 
