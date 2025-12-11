@@ -24,7 +24,7 @@ class CoffeeTable(models.Model):
     createdBy = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="table_creator")
     participants = models.ManyToManyField(User, blank=True, related_name="table_participant")
     time = models.DateTimeField(editable=False, auto_now_add=True)
-    # TODO implement other fields
+    active = models.BooleanField(default=True)
     def __str__(self):
         return self.name + ' by ' + self.createdBy.username  + ' at ' + self.time.isoformat()
 
