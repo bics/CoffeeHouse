@@ -7,16 +7,21 @@ Coffee House
 {% block main %}
 <h1>H1 Tag</h1>
 <div id="login-container" class="middle-form light-background">
-    <form id="login-form" method="POST" class="w-100 text-center">        
+    <!--Form code block was generated using ChatGPT-->
+    <form id="login-form" method="post" action="{% url 'account_login' %}" class="w-100 text-center">
         {% csrf_token %}
-        <label for="username" class="w-100">Username</label><br>
-        <input type="text" id="username" name="username" class="form-control-lg" placeholder="example@email.com"><br>
-        <label for="password" class="w-100">Password</label><br>
-        <input type="password" id="password" name="password" class="form-control-lg" placeholder="password"><br>
+
+        {{ form.non_field_errors }}
+        {{ form.as_p }}
+
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+        {% endif %}
+
         <div class="w-100">
-            <a href="{% url 'register' %}">Not registered yet?</a><br>
+            <a href="{% url 'account_signup' %}">Not registered yet?</a><br>
             <hr>
-            <input type="submit" value="Login" action="{% url 'account_login' %}">
+            <input type="submit" value="Login">
         </div>
     </form>
 </div>
