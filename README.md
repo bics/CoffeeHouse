@@ -100,6 +100,7 @@ Typography
     * Modal code block taken and modified from official Bootsrap documentation https://getbootstrap.com/docs/5.0/components/modal/
     * Card code block taken from official Bootstrap documentation for cards https://getbootstrap.com/docs/5.3/components/card/
     * Dropdown menu code block taken from official Bootstrap documentation for dropdowns https://getbootstrap.com/docs/4.0/components/dropdowns/
+    * Allauth fields taken from Code Institute material
     * Snippets generated using Chatgpt:
         * tables.html image selector for new table creation
         * Styling for the above image selector
@@ -108,6 +109,7 @@ Typography
         * Snippet to pass on table for conversations view
         * Custom admin user register for site
         * Error handling for replies, when users have no pictures
+        * Allauth settings
     * Code inspired from playlist created by Codemy.com https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy
         * 
 

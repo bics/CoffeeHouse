@@ -46,6 +46,11 @@ INSTALLED_APPS = [
     'landingpage',
     'members',
     'coffeetables',
+    # Below 4 entries taken from Code Institute material
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +63,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # Snippet taken from W3Dschools https://www.w3schools.com/django/django_static_whitenoise.php
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    # Snippet taken from Code Institute material
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'coffeehouse.urls'
@@ -151,3 +158,18 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Allauth fields 
+# Fields are taken from Code Institute material and ChatGPT
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_AUTHENTICATION_METHOD = "username"   # username login
+ACCOUNT_USERNAME_REQUIRED = True          # keep username field since you use AbstractUser
+ACCOUNT_EMAIL_VERIFICATION = "none"       # or "mandatory" if you set up SMTP
+ACCOUNT_LOGOUT_ON_GET = True              # optional convenience
+#LOGIN_REDIRECT_URL = "/"                  # where to go after login
+#ACCOUNT_LOGOUT_REDIRECT_URL = "/"         # where to go after logout
