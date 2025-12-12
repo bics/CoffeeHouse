@@ -110,6 +110,7 @@ Typography
         * Custom admin user register for site
         * Error handling for replies, when users have no pictures
         * Allauth settings
+        * Allauth signup form
     * Code inspired from playlist created by Codemy.com https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy
         * 
 

@@ -72,7 +72,7 @@ ROOT_URLCONF = 'coffeehouse.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -173,3 +173,7 @@ ACCOUNT_EMAIL_VERIFICATION = "none"       # or "mandatory" if you set up SMTP
 ACCOUNT_LOGOUT_ON_GET = True              # optional convenience
 #LOGIN_REDIRECT_URL = "/"                  # where to go after login
 #ACCOUNT_LOGOUT_REDIRECT_URL = "/"         # where to go after logout
+
+ACCOUNT_FORMS = {
+    "signup": "members.forms.AllauthSignupForm",
+}

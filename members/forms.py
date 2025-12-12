@@ -1,21 +1,12 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
-from .models import CoffeeDrinker
+from allauth.account.forms import SignupForm
 
-# class created following tutorial made by Codemy.com 
-class RegisterForm(UserCreationForm):
-    email = forms.EmailField(max_length=50,widget=forms.EmailInput(attrs={'class':'form-control', 'placeholder': 'example@email.com'}))
+# Form generated using ChatGPT
+class AllauthSignupForm(SignupForm):
+    avatar = forms.ImageField(required=False)
 
-    class Meta:
-        model = CoffeeDrinker
-        fields = ('username', 'email', 'password1', 'password2', 'avatar')
-
-    def __init__(self, *args, **kwargs):
-        super(RegisterForm, self).__init__(*args, **kwargs)
-        self.fields['username'].widget.attrs['class'] = 'form-control'
-        self.fields['username'].widget.attrs['placeholder'] = 'Username'
-        self.fields['password1'].widget.attrs['class'] = 'form-control'
-        self.fields['password1'].widget.attrs['placeholder'] = 'Password'
-        self.fields['password2'].widget.attrs['class'] = 'form-control'
-        self.fields['password2'].widget.attrs['placeholder'] = 'Confirm Password'
-    
+    def save(self, request):
+        user = super().save(request)
+        user.avatar = self.cleaned_data.get("avatar")
+        user.save()
+        return user
