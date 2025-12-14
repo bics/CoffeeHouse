@@ -166,7 +166,7 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = 'tables'
 ACCOUNT_LOGOUT_REDIRECT_URL = "account_login"
 
-ACCOUNT_LOGIN_METHODS = {"username"}   # username login
+ACCOUNT_LOGIN_METHODS = {"username", "email"}   # username/email login
 ACCOUNT_SIGNUP_FIELDS = ['email*', 'username*', 'password1*', 'password2*']
 ACCOUNT_EMAIL_VERIFICATION = "none"       # or "mandatory" if you set up SMTP
 ACCOUNT_LOGOUT_ON_GET = True              # optional convenience
@@ -174,3 +174,8 @@ ACCOUNT_LOGOUT_ON_GET = True              # optional convenience
 ACCOUNT_FORMS = {
     "signup": "members.forms.AllauthSignupForm",
 }
+
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+]
