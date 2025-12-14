@@ -46,6 +46,11 @@ INSTALLED_APPS = [
     'landingpage',
     'members',
     'coffeetables',
+    # Below 4 entries taken from Code Institute material
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +63,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # Snippet taken from W3Dschools https://www.w3schools.com/django/django_static_whitenoise.php
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    # Snippet taken from Code Institute material
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'coffeehouse.urls'
@@ -65,7 +72,7 @@ ROOT_URLCONF = 'coffeehouse.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -151,3 +158,25 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Allauth fields 
+# Fields are taken from Code Institute material and ChatGPT
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = 'tables'
+ACCOUNT_LOGOUT_REDIRECT_URL = "account_login"
+
+ACCOUNT_LOGIN_METHODS = {"username", "email"}   # username/email login
+ACCOUNT_SIGNUP_FIELDS = ['email*', 'username*', 'password1*', 'password2*']
+ACCOUNT_EMAIL_VERIFICATION = "none"       # or "mandatory" if you set up SMTP
+ACCOUNT_LOGOUT_ON_GET = True              # optional convenience
+
+ACCOUNT_FORMS = {
+    "signup": "members.forms.AllauthSignupForm",
+    "login": "members.forms.AllauthLoginForm",
+}
+
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+]

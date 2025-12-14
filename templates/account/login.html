@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Coffee House
+{% endblock %}
+
+{% block main %}
+<div id="login-container" class="middle-form light-background">
+    <!--Form code block was generated using ChatGPT-->
+    <form id="login-form" method="post" action="{% url 'account_login' %}" class="w-100 text-center">
+        {% csrf_token %}
+
+        {{ form.non_field_errors }}
+        {{ form.as_p }}
+
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+        {% endif %}
+
+        <div class="w-100">
+            <a href="{% url 'account_signup' %}">Not registered yet?</a><br>
+            <hr>
+            <input type="submit" value="Login">
+        </div>
+    </form>
+</div>
+{% endblock %}
