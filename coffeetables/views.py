@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from .models import CoffeeTable
 from .forms import CoffeeTableForm, ReplyForm
 from django.contrib import messages
+# Snippet taken from ChatGPT
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -28,6 +30,7 @@ def tables(request):
         form = CoffeeTableForm()
         return render(request, "tables.html", {'tables_list':tables_list, 'images_list': images_list, 'form': form})
     
+@login_required
 def conversation(request, pk):
     # Code snippet generated using ChatGPT
     table = CoffeeTable.objects.get(pk=pk)
