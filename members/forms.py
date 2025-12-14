@@ -24,6 +24,7 @@ class AllauthLoginForm(LoginForm):
 
         self.fields["login"].widget.attrs.update({ "class": "form-control"})
         self.fields["password"].widget.attrs.update({ "class": "form-control"})
+        self.fields.pop("remember", None)
 
 class AllauthResetPasswordForm(ResetPasswordForm):
 
