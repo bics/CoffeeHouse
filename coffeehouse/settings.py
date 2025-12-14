@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'landingpage',
     'members',
     'coffeetables',
     # Below 4 entries taken from Code Institute material
