@@ -169,6 +169,7 @@ ACCOUNT_LOGIN_METHODS = {"username", "email"}   # username/email login
 ACCOUNT_SIGNUP_FIELDS = ['email*', 'username*', 'password1*', 'password2*']
 ACCOUNT_EMAIL_VERIFICATION = "none"       # or "mandatory" if you set up SMTP
 ACCOUNT_LOGOUT_ON_GET = True              # optional convenience
+ACCOUNT_SESSION_REMEMBER = True
 
 ACCOUNT_FORMS = {
     "signup": "members.forms.AllauthSignupForm",
