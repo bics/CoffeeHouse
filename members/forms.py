@@ -1,5 +1,5 @@
 from django import forms
-from allauth.account.forms import SignupForm, LoginForm
+from allauth.account.forms import SignupForm, LoginForm, ResetPasswordForm
 
 # Forms generated using ChatGPT
 class AllauthSignupForm(SignupForm):
@@ -24,3 +24,10 @@ class AllauthLoginForm(LoginForm):
 
         self.fields["login"].widget.attrs.update({ "class": "form-control"})
         self.fields["password"].widget.attrs.update({ "class": "form-control"})
+
+class AllauthResetPasswordForm(ResetPasswordForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields["email"].widget.attrs.update({ "class": "form-control"})

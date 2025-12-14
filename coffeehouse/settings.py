@@ -173,6 +173,7 @@ ACCOUNT_LOGOUT_ON_GET = True              # optional convenience
 ACCOUNT_FORMS = {
     "signup": "members.forms.AllauthSignupForm",
     "login": "members.forms.AllauthLoginForm",
+    "reset_password": "members.forms.AllauthResetPasswordForm"
 }
 
 AUTHENTICATION_BACKENDS = [
