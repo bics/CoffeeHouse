@@ -166,13 +166,10 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = 'tables'
 ACCOUNT_LOGOUT_REDIRECT_URL = "account_login"
 
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_AUTHENTICATION_METHOD = "username"   # username login
-ACCOUNT_USERNAME_REQUIRED = True          # keep username field since you use AbstractUser
+ACCOUNT_LOGIN_METHODS = {"username"}   # username login
+ACCOUNT_SIGNUP_FIELDS = ['email*', 'username*', 'password1*', 'password2*']
 ACCOUNT_EMAIL_VERIFICATION = "none"       # or "mandatory" if you set up SMTP
 ACCOUNT_LOGOUT_ON_GET = True              # optional convenience
-#LOGIN_REDIRECT_URL = "/"                  # where to go after login
-#ACCOUNT_LOGOUT_REDIRECT_URL = "/"         # where to go after logout
 
 ACCOUNT_FORMS = {
     "signup": "members.forms.AllauthSignupForm",
