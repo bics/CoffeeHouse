@@ -5,7 +5,7 @@ Coffee House | Login
 {% endblock %}
 
 {% block main %}
-<div id="login-container" class="middle-form light-background">
+<div id="login-container container" class="middle-form light-background rounded">
     <!--Form code block was generated using ChatGPT-->
     <form id="login-form" method="post" action="{% url 'account_login' %}" class="w-100 text-center">
         {% csrf_token %}
@@ -21,7 +21,7 @@ Coffee House | Login
             <hr>
             <a href="{% url 'account_signup' %}">Not registered yet?</a><br>
             <hr>
-            <input type="submit" value="Login">
+            <input class="btn btn-success" type="submit" value="Login">
         </div>
     </form>
 </div>
