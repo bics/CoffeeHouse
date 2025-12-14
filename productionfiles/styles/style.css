@@ -6,7 +6,7 @@
 }
 
 *{
-    color: var(--vibrant-coral-colour);
+    color: var(--espresso-colour);
 }
 
 header {
@@ -95,5 +95,9 @@ input[type="radio"]:checked + .image-tile {
 #home-nav-element{
     padding-right: 10px;
     border-right: 2px solid var(--vibrant-coral-colour);
+}
+
+#base-footer i{
+    color: var(--vibrant-coral-colour);
 }
 
