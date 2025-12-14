@@ -1,7 +1,7 @@
 from django import forms
 from allauth.account.forms import SignupForm, LoginForm
 
-# Form generated using ChatGPT
+# Forms generated using ChatGPT
 class AllauthSignupForm(SignupForm):
     avatar = forms.ImageField(required=False)
 
