@@ -15,10 +15,10 @@ Coffee House | {{table.name}}
         <p class="coral-color">by {{table.createdBy.username}}</p>
         <p class="coral-color">{{table.description}}</p>
     </div>
-    <hr>
+    <hr class="coral-color">
     <div class="container-fluid">
         {% if not replies %}
-        <div class="text-center">
+        <div class="text-center coral-color">
             <h5>There are no replies yet.</h5>
         </div>
         {% else %}
@@ -47,7 +47,7 @@ Coffee House | {{table.name}}
         {% endfor %}
         {% endif %}
     </div>
-        <hr>
+        <hr class="coral-color">
         <div class="container-fluid text-center">
             <button data-bs-toggle="modal" data-bs-target="#replyModal" class="btn btn-warning m-2">Reply</button>
 
