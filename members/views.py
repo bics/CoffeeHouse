@@ -29,7 +29,7 @@ def user_deletion(request):
             logout(request)      # end session first
             user.delete()        # then delete user
             messages.success(request, "Your account has been deleted.")
-            return redirect("home")  # or a "goodbye" page
+            return redirect("account_login")  # or a "goodbye" page
         except IntegrityError:
             messages.error(
                 request,
