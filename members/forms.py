@@ -1,5 +1,11 @@
 from django import forms
 from allauth.account.forms import SignupForm, LoginForm, ResetPasswordForm
+from .models import CoffeeDrinker
+
+class AccountUpdateForm(forms.ModelForm):
+    class Meta:
+        model = CoffeeDrinker
+        fields = ('username', 'email', 'avatar')
 
 # Forms generated using ChatGPT
 class AllauthSignupForm(SignupForm):
