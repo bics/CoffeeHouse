@@ -24,3 +24,12 @@ class ReplyForm(ModelForm):
         widgets = {
             "message": forms.Textarea(attrs={'class':'form-control'})
         }
+
+class UpdateReplyForm(ModelForm):
+    class Meta:
+        model = Reply
+        fields = ('message',)
+
+        widgets = {
+            "message": forms.Textarea(attrs={'class':'form-control'})
+        }
