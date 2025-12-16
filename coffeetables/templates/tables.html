@@ -13,7 +13,6 @@ Coffee House | Lobby
         {% endif %}
     </div>
 
-    <!--TODO transform into Bootstrap cards-->
     {% for table in tables_list %}
     {% if table.active %}
     <div class="card mb-3 light-background">
@@ -35,6 +34,7 @@ Coffee House | Lobby
     {% endfor %}
 </div>
 
+<!--TODO style modal-->
 <!--Code block taken and modified from official Bootsrap documentation https://getbootstrap.com/docs/5.0/components/modal/-->
 <div>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
