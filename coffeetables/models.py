@@ -10,6 +10,9 @@ class Reply(models.Model):
     message = models.TextField(max_length=255)
     createdBy = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
     time = models.DateTimeField(editable=False, auto_now_add=True)
+    edited = models.BooleanField(default=False)
+    history = models.TextField(blank=True)
+    timeEdited = models.DateTimeField(editable=False, blank=True, null=True)
     
     def __str__(self):
         # Snippet taken from ChatGPT
