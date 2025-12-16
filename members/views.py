@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import AccountUpdateForm
+from django.db import IntegrityError
 
 # Create your views here.
 
@@ -21,4 +22,19 @@ def logout_user(request):
     return redirect('home')
 
 def user_deletion(request):
+    if request.method == "POST":
+        # Try-catch logic generated using ChatGPT
+        try:
+            user = request.user
+            logout(request)      # end session first
+            user.delete()        # then delete user
+            messages.success(request, "Your account has been deleted.")
+            return redirect("home")  # or a "goodbye" page
+        except IntegrityError:
+            messages.error(
+                request,
+                "Your account cannot be deleted because it still owns content."
+            )
+            return redirect("account_management")
+
     return render(request, 'user_deletion.html')

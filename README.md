@@ -114,6 +114,7 @@ Typography
         * Allauth login form
         * Account management form fields
         * Null check for model variable
+        * Deletion view try-catch block
     * Code inspired from playlist created by Codemy.com https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy
         * 
 
