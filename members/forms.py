@@ -8,8 +8,8 @@ class AccountUpdateForm(forms.ModelForm):
         fields = ('username', 'email', 'avatar')
 
         widgets = {
-            "username": forms.TextInput(attrs={'class':'form-control'}),
-            "email": forms.EmailInput(attrs={'class':'form-control'}),
+            "username": forms.TextInput(attrs={'class':'form-control mb-2'}),
+            "email": forms.EmailInput(attrs={'class':'form-control mb-2'}),
         }
 
 # Forms generated using ChatGPT
