@@ -10,6 +10,7 @@ def account_management(request):
         form =  AccountUpdateForm(request.POST, instance=request.user)
         if form.is_valid():
             form.save()
+            messages.success(request, "Your details have been updated.")
             return redirect('account_management')
     else:
         form = AccountUpdateForm(instance=request.user)

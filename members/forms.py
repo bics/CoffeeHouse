@@ -11,6 +11,11 @@ class AccountUpdateForm(forms.ModelForm):
             "username": forms.TextInput(attrs={'class':'form-control mb-2'}),
             "email": forms.EmailInput(attrs={'class':'form-control mb-2'}),
         }
+        
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["username"].required = True
+        self.fields["email"].required = True
 
 # Forms generated using ChatGPT
 class AllauthSignupForm(SignupForm):
