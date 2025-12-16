@@ -9,28 +9,72 @@ Coffee House | {{ user.username }}
 {% endblock %}
 
 {% block main %}
-    <div class="middle-form light-background rounded text-center">
-        <h5>Change Details</h5>
-        <hr>
-        <form form action="" method="POST">
-            {% csrf_token %}
-            <div>
-                <!--Form fields semi-generated with ChatGPT-->
-                {{form.username.label_tag}}
-                {{form.username}}
-                {{ form.email.label_tag }}
-                {{ form.email }}
+<div class="middle-form light-background rounded text-center">
+    <h5>Change Details</h5>
+    <hr>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div>
+            <!--Form fields semi-generated with ChatGPT-->
+            {{form.username.label_tag}}
+            {{form.username}}
+            {{ form.email.label_tag }}
+            {{ form.email }}
 
-                <button class="btn btn-danger mb-2">Reset Password</button><br>
-            
-                {% if form.instance.avatar %}
-                <img id="display-avatar" class="img-fluid table-image mb-2" src="{{ form.instance.avatar.url }}" alt="Avatar"><br>
-                {% endif %}
-                <label for="{{ form.avatar.name }}">Replace Avatar</label>            
-                <input type="file" name="{{ form.avatar.name }}" id="{{ form.avatar.id_for_label }}" class="form-control mb-2" />
+            <button type="button" data-bs-toggle="modal" data-bs-target="#PasswordResetModal" class="btn btn-warning mb-2">Reset Password</button><br>
+
+            {% if form.instance.avatar %}
+            <img id="display-avatar" class="img-fluid table-image mb-2" src="{{ form.instance.avatar.url }}"
+                alt="Avatar"><br>
+            {% endif %}
+            <label for="{{ form.avatar.name }}">Replace Avatar</label>
+            <input type="file" name="{{ form.avatar.name }}" id="{{ form.avatar.id_for_label }}"
+                class="form-control mb-2" />
+            <button type="submit" class="btn btn-success mb-2">Update Details</button>
+        </div>
+    </form>
+    <hr>
+    <button data-bs-toggle="modal" data-bs-target="#UserDeleteionModal" class="btn btn-danger m-2">Delete Account</button><br>
+</div>
+
+
+<div>
+    <div class="modal fade" id="PasswordResetModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content light-background text-center">
+                <div class="modal-header espresso-border-color">
+                    <h5 class="modal-title color-espresso" id="exampleModalLabel">Reset Password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Your password will be reset.</p>
+                    <p>Please check your emails after resetting.</p>
+                    <a href="{% url 'account_reset_password' %}" class="btn btn-warning mb-2">Reset</a>
+                </div>
             </div>
-        </form>
-        <hr>        
-        <button class="btn btn-danger m-2">Delete Account</button><br>
+        </div>
     </div>
+</div>
+
+<!--TODO implement deletion-->
+<div>
+    <div class="modal fade" id="UserDeleteionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content light-background text-center">
+                <div class="modal-header espresso-border-color">
+                    <h5 class="modal-title color-espresso" id="exampleModalLabel">Delete User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This action cannot be undone.</p>
+                    <p>Are you sure?</p>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
