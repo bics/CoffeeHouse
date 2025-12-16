@@ -112,6 +112,7 @@ Typography
         * Allauth settings
         * Allauth signup form
         * Allauth login form
+        * Account management form fields
     * Code inspired from playlist created by Codemy.com https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy
         * 
 

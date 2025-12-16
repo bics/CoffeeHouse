@@ -7,6 +7,11 @@ class AccountUpdateForm(forms.ModelForm):
         model = CoffeeDrinker
         fields = ('username', 'email', 'avatar')
 
+        widgets = {
+            "username": forms.TextInput(attrs={'class':'form-control'}),
+            "email": forms.EmailInput(attrs={'class':'form-control'}),
+        }
+
 # Forms generated using ChatGPT
 class AllauthSignupForm(SignupForm):
     avatar = forms.ImageField(required=False)

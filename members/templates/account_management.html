@@ -4,12 +4,33 @@
 Coffee House | {{ user.username }}
 {% endblock %}
 
+{% block nav %}
+    <a href="{% url 'tables' %}" class="nav-link coral-color align-self-center">Back to Tables</a>
+{% endblock %}
+
 {% block main %}
-    <div class="middle-form light-background rounded">
-        <h1>H1 Tag</h1>
+    <div class="middle-form light-background rounded text-center">
+        <h5>Change Details</h5>
+        <hr>
         <form form action="" method="POST">
             {% csrf_token %}
-            {{ form.as_p}}
+            <div>
+                <!--Form fields semi-generated with ChatGPT-->
+                {{form.username.label_tag}}
+                {{form.username}}
+                {{ form.email.label_tag }}
+                {{ form.email }}
+
+                <button class="btn btn-danger m-2">Reset Password</button><br>
+            
+                {% if form.instance.avatar %}
+                <img id="display-avatar" class="img-fluid table-image" src="{{ form.instance.avatar.url }}" alt="Avatar"><br>
+                {% endif %}
+                <label for="{{ form.avatar.name }}">Replace Avatar</label>            
+                <input type="file" name="{{ form.avatar.name }}" id="{{ form.avatar.id_for_label }}" class="form-control" />
+            </div>
         </form>
+        <hr>        
+        <button class="btn btn-danger m-2">Delete Account</button><br>
     </div>
 {% endblock %}
