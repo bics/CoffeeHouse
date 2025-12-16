@@ -6,7 +6,13 @@ from .forms import AccountUpdateForm
 # Create your views here.
 
 def account_management(request):
-    form = AccountUpdateForm(request.POST)
+    if request.method == "POST":
+        form =  AccountUpdateForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            return redirect('account_management')
+    else:
+        form = AccountUpdateForm(instance=request.user)
     return render(request, 'account_management.html', { "form": form})
 
 def logout_user(request):

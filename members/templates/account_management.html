@@ -5,6 +5,11 @@ Coffee House | {{ user.username }}
 {% endblock %}
 
 {% block main %}
-    <h1>H1 Tag</h1>
-    {{ form.as_p}}
+    <div class="middle-form light-background rounded">
+        <h1>H1 Tag</h1>
+        <form form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p}}
+        </form>
+    </div>
 {% endblock %}
