@@ -8,11 +8,13 @@ User = get_user_model()
     
 class Reply(models.Model):
     message = models.TextField(max_length=255)
-    createdBy = models.ForeignKey(User, blank=True, on_delete=models.RESTRICT)
+    createdBy = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
     time = models.DateTimeField(editable=False, auto_now_add=True)
     
     def __str__(self):
-        return self.message + ' ' + self.createdBy.__str__() + ' ' + self.time.isoformat()
+        # Snippet taken from ChatGPT
+        name = self.createdBy.username if self.createdBy else "Deleted User"
+        return self.message + ' ' + name + ' ' + self.time.isoformat()
     
 
 # model inspired by tutorial made by Codemy.com
@@ -21,12 +23,14 @@ class CoffeeTable(models.Model):
     image = models.CharField(blank=True) # TODO add enum for available images or from html select
     description = models.CharField(max_length=255)
     replies = models.ManyToManyField(Reply, blank=True)
-    createdBy = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="table_creator")
+    createdBy = models.ForeignKey(User, null=True, on_delete=models.SET_NULL, related_name="table_creator")
     participants = models.ManyToManyField(User, blank=True, related_name="table_participant")
     time = models.DateTimeField(editable=False, auto_now_add=True)
     active = models.BooleanField(default=True)
-    def __str__(self):
-        return self.name + ' by ' + self.createdBy.username  + ' at ' + self.time.isoformat()
+
+    def __str__(self):        
+        name = self.createdBy.username if self.createdBy else "Deleted User"
+        return self.name + ' by ' + name  + ' at ' + self.time.isoformat()
 
 
 
