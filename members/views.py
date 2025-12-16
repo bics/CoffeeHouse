@@ -17,10 +17,6 @@ def account_management(request):
         form = AccountUpdateForm(instance=request.user)
     return render(request, 'account_management.html', { "form": form})
 
-def logout_user(request):
-    logout(request)
-    return redirect('home')
-
 def user_deletion(request):
     if request.method == "POST":
         # Try-catch logic generated using ChatGPT
