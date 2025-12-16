@@ -34,7 +34,7 @@ Coffee House | {{ user.username }}
         </div>
     </form>
     <hr>
-    <button data-bs-toggle="modal" data-bs-target="#UserDeleteionModal" class="btn btn-danger m-2">Delete Account</button><br>
+    <a href="{% url 'user_deletion' %}" class="btn btn-danger m-2">Delete Account</a><br>
 </div>
 
 
@@ -50,28 +50,6 @@ Coffee House | {{ user.username }}
                     <p>Your password will be reset.</p>
                     <p>Please check your emails after resetting.</p>
                     <a href="{% url 'account_reset_password' %}" class="btn btn-warning mb-2">Reset</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--TODO implement deletion-->
-<div>
-    <div class="modal fade" id="UserDeleteionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content light-background text-center">
-                <div class="modal-header espresso-border-color">
-                    <h5 class="modal-title color-espresso" id="exampleModalLabel">Delete User</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>This action cannot be undone.</p>
-                    <p>Are you sure?</p>
-                </div>
-                <div class="modal-footer d-flex justify-content-between">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
                 </div>
             </div>
         </div>

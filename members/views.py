@@ -19,3 +19,6 @@ def account_management(request):
 def logout_user(request):
     logout(request)
     return redirect('home')
+
+def user_deletion(request):
+    return render(request, 'user_deletion.html')

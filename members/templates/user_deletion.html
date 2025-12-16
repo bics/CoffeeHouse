@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Coffee House | {{ user.username }}
+{% endblock %}
+
+{% block nav %}
+    <a href="{% url 'account_management' %}" class="nav-link coral-color align-self-center">Back</a>
+{% endblock %}
+
+{% block main %}
+<div class="middle-form light-background rounded text-center mb-3">
+    <h5>Delete Account</h5>
+    <strong><p>This action cannot be undone.</p></strong>
+    <hr>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div>    
+            <p>You are about to delete your account, named:</p>
+            <p class="text-danger">{{user.username}}</p>
+            <p>Are you sure?</p>
+            <hr>
+        </div>
+        <div class="modal-footer d-flex justify-content-between">
+            <a href="{% url 'account_management' %}" class="btn btn-secondary">Back</a>
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
