@@ -16,6 +16,11 @@ class Reply(models.Model):
         name = self.createdBy.username if self.createdBy else "Deleted User"
         return self.message + ' ' + name + ' ' + self.time.isoformat()
     
+    @property
+    def creator_name(self):
+        name = self.createdBy.username if self.createdBy else "Deleted User"
+        return name.__str__()
+    
 
 # model inspired by tutorial made by Codemy.com
 class CoffeeTable(models.Model):
@@ -31,6 +36,11 @@ class CoffeeTable(models.Model):
     def __str__(self):        
         name = self.createdBy.username if self.createdBy else "Deleted User"
         return self.name + ' by ' + name  + ' at ' + self.time.isoformat()
+    
+    @property
+    def creator_name(self):
+        name = self.createdBy.username if self.createdBy else "Deleted User"
+        return name.__str__()
 
 
 
