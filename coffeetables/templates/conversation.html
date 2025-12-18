@@ -5,7 +5,7 @@ Coffee House | {{table.name}}
 {% endblock %}
 
 {% block nav %}
-    <a href="{% url 'tables' %}" class="nav-link coral-color align-self-center">Back to Tables</a>
+<a href="{% url 'tables' %}" class="nav-link coral-color align-self-center">Back to Tables</a>
 {% endblock %}
 
 {% block main %}
@@ -31,7 +31,8 @@ Coffee House | {{table.name}}
                     {% if reply.createdBy.avatar %}
                     <img src="{{ reply.createdBy.avatar.url }}" class="img-fluid rounded-start" alt="avatar">
                     {% else %}
-                    <img src="/static/assets/images/avatar_images/avatar_empty.png" class="img-fluid rounded-start" alt="no avatar">
+                    <img src="/static/assets/images/avatar_images/avatar_empty.png" class="img-fluid rounded-start"
+                        alt="no avatar">
                     {% endif %}
                 </div>
                 <div class="col-md-10">
@@ -39,7 +40,8 @@ Coffee House | {{table.name}}
                         <div class="container-fluid d-flex justify-content-between">
                             <h5 class="card-title align-self-center">{{reply.creator_name}}</h5>
                             {% if user.id is reply.createdBy.id %}
-                            <a href="#" class="btn btn-warning">Edit</a>
+                            <button data-bs-toggle="modal" data-bs-target="#updateReplyModal-{{ reply.id }}"
+                                class="btn btn-warning">Edit</button>
                             {% endif %}
                         </div>
                         <hr>
@@ -49,18 +51,42 @@ Coffee House | {{table.name}}
                 </div>
             </div>
         </div>
+
+        <div>
+            <div class="modal fade" id="updateReplyModal-{{ reply.id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content light-background">
+                        <div class="modal-header espresso-border-color">
+                            <h5 class="modal-title color-espresso" id="exampleModalLabel">Send a Reply</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form action="" method="POST">
+                            <div class="modal-body">
+                                {% csrf_token %}
+                                <input type="hidden" name="reply_id" value="{{ reply.id }}">
+                                {{ update_reply_form.as_p}}
+                            </div>
+                            <div class="modal-footer espresso-border-color">
+                                <button type="submit" class="btn btn-success" name="update-reply-submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         {% endfor %}
         {% endif %}
     </div>
-        <hr class="coral-color">
-        <div class="container-fluid text-center">
-            <button data-bs-toggle="modal" data-bs-target="#replyModal" class="btn btn-warning m-2">Reply</button>
+    <hr class="coral-color">
+    <div class="container-fluid text-center">
+        <button data-bs-toggle="modal" data-bs-target="#replyModal" class="btn btn-warning m-2">Reply</button>
 
-            {% if user.id is table.createdBy.id %}  
-                <br>   
-                <button class="btn btn-danger m-2" data-bs-toggle="modal" data-bs-target="#closeModal">Close Table</button>           
-            {% endif %}
-        </div>
+        {% if user.id is table.createdBy.id %}
+        <br>
+        <button class="btn btn-danger m-2" data-bs-toggle="modal" data-bs-target="#closeModal">Close Table</button>
+        {% endif %}
+    </div>
 </div>
 
 <div>
@@ -74,10 +100,10 @@ Coffee House | {{table.name}}
                 <form action="" method="POST">
                     <div class="modal-body">
                         {% csrf_token %}
-                        {{ form.as_p}}
+                        {{ reply_form.as_p}}
                     </div>
                     <div class="modal-footer espresso-border-color">
-                        <button type="submit" class="btn btn-success">Send</button>
+                        <button type="submit" class="btn btn-success" name="reply-submit">Send</button>
                     </div>
                 </form>
             </div>
@@ -93,15 +119,16 @@ Coffee House | {{table.name}}
                     <h5 class="modal-title color-espresso" id="exampleModalLabel">Close a Table</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">        
+                <div class="modal-body">
                     <strong class="color-espresso">You are about to close the table, are you sure?</strong>
                 </div>
                 <div class="modal-footer espresso-border-color">
-                    <button class="btn btn-warning m-2 close" data-bs-dismiss="modal" aria-label="Cancel">Cancel</button>
+                    <button class="btn btn-warning m-2 close" data-bs-dismiss="modal"
+                        aria-label="Cancel">Cancel</button>
                     <a href="{% url 'close_table' table.id %}" type="button" class="btn btn-danger m-2">Close Table</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-    {% endblock %}
+{% endblock %}
