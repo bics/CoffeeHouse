@@ -71,8 +71,8 @@ def conversation(request, pk):
                 return redirect('conversation', table.id) 
             else:            
                 messages.success(request, ("There were some errors with some fields"))
-    else:
-        return render(request, "conversation.html", {"table": table, "replies": replies, "reply_form": reply_form, "update_reply_form": update_reply_form})
+
+    return render(request, "conversation.html", {"table": table, "replies": replies, "reply_form": reply_form, "update_reply_form": update_reply_form})
     
     
 def close_table(request, pk):    
