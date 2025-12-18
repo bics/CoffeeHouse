@@ -62,10 +62,10 @@ def conversation(request, pk):
             if update_reply_form.is_valid():
                 new_message = update_reply_form.cleaned_data["message"]
                 reply.history = reply.history +"\n" + old_message
-                reply.edited = True
+                reply.isEdited = True
                 reply.timeEdited = timezone.now()
                 reply.message = new_message
-                reply.save(update_fields=["message", "history", "edited", "timeEdited"])
+                reply.save(update_fields=["message", "history", "isEdited", "timeEdited"])
                 return redirect('conversation', table.id) 
             else:            
                 messages.success(request, ("There were some errors with some fields"))
