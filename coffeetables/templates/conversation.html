@@ -31,7 +31,7 @@ Coffee House | {{table.name}}
                     {% if reply.createdBy.avatar %}
                     <img src="{{ reply.createdBy.avatar.url }}" class="img-fluid rounded-start" alt="avatar">
                     {% else %}
-                    <img src="/static/assets/images/avatar_images/avatar_empty.png" class="img-fluid rounded-start"
+                    <img src="{{ reply.createdBy.default_avatar }}" class="img-fluid rounded-start"
                         alt="no avatar">
                     {% endif %}
                 </div>
