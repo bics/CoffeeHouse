@@ -22,8 +22,9 @@ def tables(request):
         if form.is_valid():
             # Code snippet generated using ChatGPT
             obj = form.save(commit=False)
-            obj.createdBy= request.user
+            obj.createdBy = request.user
             obj.save()
+            obj.participants.add(request.user)
             form.save_m2m()
             return redirect('tables')    
         else:            
