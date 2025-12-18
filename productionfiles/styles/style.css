@@ -61,6 +61,11 @@ footer {
     margin-left: 10px;
 }
 
+.display-avatar{
+    width: 30vh;
+    height: 30vh;
+}
+
 /* Below three entries generated using ChatGPT */
 .image-tile {
     background-image: url("../assets/images/coffee_grounds.jpg");
