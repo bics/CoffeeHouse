@@ -50,6 +50,7 @@ def conversation(request, pk):
                 obj.createdBy= request.user
                 obj.save()
                 table.replies.add(obj)
+                table.participants.add(request.user)
                 return redirect('conversation', table.id) 
             else:            
                 messages.success(request, ("There were some errors with some fields"))
