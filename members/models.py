@@ -15,7 +15,7 @@ def getRandomAvatar():
 # Create your models here.
 class CoffeeDrinker(AbstractUser):
     avatar = models.ImageField(null=True, blank=True, upload_to="avatar_images/")
-    default_avatar = models.CharField(default=getRandomAvatar())
+    default_avatar = models.CharField(default=getRandomAvatar)
 
 
 
