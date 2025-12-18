@@ -65,7 +65,7 @@ Coffee House | {{table.name}}
                             <div class="modal-body">
                                 {% csrf_token %}
                                 <input type="hidden" name="reply_id" value="{{ reply.id }}">
-                                {{ update_reply_form.as_p}}
+                                <textarea name="message" class="form-control" rows="10">{{ reply.message }}</textarea>
                             </div>
                             <div class="modal-footer espresso-border-color">
                                 <button type="submit" class="btn btn-success" name="update-reply-submit">Send</button>
