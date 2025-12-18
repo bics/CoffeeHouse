@@ -11,13 +11,13 @@ class CoffeeDrinkerAdmin(UserAdmin):
     # For editing existing users
     fieldsets = UserAdmin.fieldsets + (
         ('avatar', {
-            'fields': ('avatar',),
+            'fields': ('avatar', 'default_avatar'),
         }),
     )
 
     # For creating new users (the "Add user" form)
     add_fieldsets = UserAdmin.add_fieldsets + (
         ('avatar', {
-            'fields': ('avatar',),
+            'fields': ('avatar', 'default_avatar'),
         }),
     )

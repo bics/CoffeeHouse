@@ -61,6 +61,11 @@ footer {
     margin-left: 10px;
 }
 
+.display-avatar{
+    width: 30vh;
+    height: 30vh;
+}
+
 /* Below three entries generated using ChatGPT */
 .image-tile {
     background-image: url("../assets/images/coffee_grounds.jpg");
@@ -99,10 +104,5 @@ input[type="radio"]:checked + .image-tile {
 
 #base-footer i{
     color: var(--vibrant-coral-colour);
-}
-
-#display-avatar{
-    width: 30vh;
-    height: 30vh;
 }
 

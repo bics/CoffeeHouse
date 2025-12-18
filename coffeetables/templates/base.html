@@ -40,7 +40,7 @@
                                 {% if user.avatar %}
                                 <li><img src="{{user.avatar.url}}" class="img-fluid rounded-start card-img-top" alt="avatar"></li>
                                 {% else %}
-                                <img src="/static/assets/images/avatar_images/avatar_empty.png" class="img-fluid rounded-start card-img-top"
+                                <img src="{{ user.default_avatar }}" class="img-fluid rounded-start card-img-top"
                                     alt="no avatar">
                                 {% endif %}
                                 <div class="card-body">

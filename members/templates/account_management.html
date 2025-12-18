@@ -12,7 +12,7 @@ Coffee House | {{ user.username }}
 <div class="middle-form light-background rounded text-center mb-3">
     <h5>Change Details</h5>
     <hr>
-    <form action="" method="POST">
+    <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <div>
             <!--Form fields semi-generated with ChatGPT-->
@@ -23,8 +23,11 @@ Coffee House | {{ user.username }}
 
             <button type="button" data-bs-toggle="modal" data-bs-target="#PasswordResetModal" class="btn btn-warning mb-2">Reset Password</button><br>
 
-            {% if form.instance.avatar %}
-            <img id="display-avatar" class="img-fluid table-image mb-2" src="{{ form.instance.avatar.url }}"
+            {% if user.avatar %}
+            <img class="img-fluid table-image mb-2 display-avatar" src="{{ user.avatar.url }}"
+                alt="Avatar"><br>
+            {% else %}
+            <img class="img-fluid table-image mb-2 display-avatar" src="{{ user.default_avatar }}"
                 alt="Avatar"><br>
             {% endif %}
             <label for="{{ form.avatar.name }}">Replace Avatar</label>
