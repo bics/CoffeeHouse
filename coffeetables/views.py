@@ -33,8 +33,8 @@ def tables(request):
         return render(request, "tables.html", {'tables_list':tables_list, 'images_list': images_list, 'form': form})
     
 @login_required
+# View partially generated using ChatGPT
 def conversation(request, pk):
-    # Code snippet generated using ChatGPT
     table = CoffeeTable.objects.get(pk=pk)
     replies = table.replies.all()
 

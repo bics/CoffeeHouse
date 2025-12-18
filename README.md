@@ -106,7 +106,7 @@ Typography
         * Styling for the above image selector
         * Hiding form field when creating new tables
         * Auto updating form with logged in user
-        * Snippet to pass on table for conversations view
+        * Conversation view
         * Custom admin user register for site
         * Error handling for replies, when users have no pictures
         * Allauth settings

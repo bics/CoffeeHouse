@@ -47,7 +47,7 @@ Coffee House | {{table.name}}
                         <hr>
                         <p class="card-text color-espresso">{{reply.message}}</p>
                         {% if reply.isEdited %}
-                        <p></p>
+                        <p class="card-text"><small class="text-body-secondary">Last edited at: {{reply.timeEdited}}</small></p>
                         {% else %}
                         <p class="card-text"><small class="text-body-secondary">{{reply.time}}</small></p>
                         {% endif %}
