@@ -191,3 +191,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get("env_email_host")
 EMAIL_HOST_PASSWORD = os.environ.get("env_email_password")
 DEFAULT_FROM_EMAIL = os.environ.get("env_email_default")
+
+ACCOUNT_EMAIL_SUBJECT_PREFIX = "Coffeehouse "
