@@ -1,5 +1,5 @@
 from django import forms
-from allauth.account.forms import SignupForm, LoginForm, ResetPasswordForm
+from allauth.account.forms import SignupForm, LoginForm, ResetPasswordForm, ResetPasswordKeyForm
 from .models import CoffeeDrinker
 
 class AccountUpdateForm(forms.ModelForm):
@@ -47,3 +47,11 @@ class AllauthResetPasswordForm(ResetPasswordForm):
         super().__init__(*args, **kwargs)
 
         self.fields["email"].widget.attrs.update({ "class": "form-control"})
+
+class AllauthChangePasswordForm(ResetPasswordKeyForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields["password1"].widget.attrs.update({ "class": "form-control"})
+        self.fields["password2"].widget.attrs.update({ "class": "form-control"})

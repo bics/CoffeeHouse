@@ -174,7 +174,8 @@ ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_FORMS = {
     "signup": "members.forms.AllauthSignupForm",
     "login": "members.forms.AllauthLoginForm",
-    "reset_password": "members.forms.AllauthResetPasswordForm"
+    "reset_password": "members.forms.AllauthResetPasswordForm",
+    "reset_password_from_key": "members.forms.AllauthChangePasswordForm",
 }
 
 AUTHENTICATION_BACKENDS = [
