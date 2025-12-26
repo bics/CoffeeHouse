@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 Coffee House | {{table.name}}
@@ -30,9 +31,12 @@ Coffee House | {{table.name}}
                     <!--Code block generated using ChatGPT-->
                     {% if reply.createdBy.avatar %}
                     <img src="{{ reply.createdBy.avatar.url }}" class="img-fluid rounded-start" alt="avatar">
-                    {% else %}
+                    {% elif reply.createdBy.default_avatar %}
                     <img src="{{ reply.createdBy.default_avatar }}" class="img-fluid rounded-start"
                         alt="no avatar">
+                    {% else %}
+                    <img src="{% static 'assets/images/avatar_images/avatar_empty.png' %}" class="img-fluid rounded-start"
+                        alt="no default avatar">
                     {% endif %}
                 </div>
                 <div class="col-md-10">
