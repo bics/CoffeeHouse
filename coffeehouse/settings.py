@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'members',
     'coffeetables',
+    "cloudinary",
+    "cloudinary_storage",
     # Below 4 entries taken from Code Institute material
     'django.contrib.sites',
     'allauth',
@@ -147,6 +149,16 @@ STATIC_ROOT = BASE_DIR / 'productionfiles'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+
+#Cloudinary settings set up using ChatGPT
+STORAGES = {
+    "default": {
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 # Media locations referenced following Codemy tutorial
 MEDIA_URL = '/media/'
