@@ -23,6 +23,10 @@ footer {
     bottom: 0;
 }
 
+nav a:hover, a:active, a:focus {
+    color: var(--intermediate-background-color) !important;
+}
+
 .coral-color{
     color: var(--vibrant-coral-colour);
 }
