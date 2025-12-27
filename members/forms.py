@@ -11,6 +11,9 @@ class AccountUpdateForm(forms.ModelForm):
             "username": forms.TextInput(attrs={'class':'form-control mb-2'}),
             "email": forms.EmailInput(attrs={'class':'form-control mb-2'}),
         }
+        help_texts = {
+            "avatar": "Optional. Your image will be stored securely using Cloudinary to display your profile picture.",
+        }
         
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -19,7 +22,10 @@ class AccountUpdateForm(forms.ModelForm):
 
 # Forms generated using ChatGPT
 class AllauthSignupForm(SignupForm):
-    avatar = forms.ImageField(required=False)
+    avatar = forms.ImageField(
+        required=False,
+        help_text="Optional. Your image will be stored securely using Cloudinary to display your profile picture."
+        )
 
     def save(self, request):
         user = super().save(request)

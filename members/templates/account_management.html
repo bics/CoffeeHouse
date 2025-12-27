@@ -20,19 +20,25 @@ Coffee House | {{ user.username }}
             {{form.username}}
             {{ form.email.label_tag }}
             {{ form.email }}
-
-            <button type="button" data-bs-toggle="modal" data-bs-target="#PasswordResetModal" class="btn btn-warning mb-2">Reset Password</button><br>
-
+        
+            <button type="button" data-bs-toggle="modal" data-bs-target="#PasswordResetModal" class="btn btn-warning mb-2">Reset
+                Password</button><br>
+        
             {% if user.avatar %}
-            <img class="img-fluid table-image mb-2 display-avatar" src="{{ user.avatar.url }}"
-                alt="Avatar"><br>
+            <img class="img-fluid table-image mb-2 display-avatar" src="{{ user.avatar.url }}" alt="Avatar"><br>
             {% else %}
-            <img class="img-fluid table-image mb-2 display-avatar" src="{{ user.default_avatar }}"
-                alt="Avatar"><br>
+            <img class="img-fluid table-image mb-2 display-avatar" src="{{ user.default_avatar }}" alt="Avatar"><br>
             {% endif %}
             <label for="{{ form.avatar.name }}">Replace Avatar</label>
-            <input type="file" name="{{ form.avatar.name }}" id="{{ form.avatar.id_for_label }}"
-                class="form-control mb-2" />
+            <input type="file" name="{{ form.avatar.name }}" id="{{ form.avatar.id_for_label }}" class="form-control " />   
+            <!--Help text display generated with ChatGPT-->     
+            {% if form.avatar.help_text %}
+            <small class="form-text text-muted">
+                {{ form.avatar.help_text }}
+            </small>
+            {% endif %}
+            <br>
+            <div class="mb-2"></div>
             <button type="submit" class="btn btn-success mb-2">Update Details</button>
         </div>
     </form>

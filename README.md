@@ -117,6 +117,7 @@ Typography
         * Deletion view try-catch block
         * SMTP settings entries
         * Cloudinary settings for file uploads
+        * Helper text for avatar uploads
     * Code inspired from playlist created by Codemy.com https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy
         * 
 
