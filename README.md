@@ -1,6 +1,8 @@
 # CoffeeHouse
 
-[Deployed site](http://coffee-house-4393250a7201.herokuapp.com/)
+<a href="http://coffee-house-4393250a7201.herokuapp.com/" target="_blank" rel="deployed-site">
+  Deployed site
+</a>
 
 # Table of contents    
 
