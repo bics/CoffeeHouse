@@ -1,6 +1,6 @@
 # CoffeeHouse
 
-[Deployed site](http://coffee-house-4393250a7201.herokuapp.com/)
+[Deployed site](http://coffee-house-4393250a7201.herokuapp.com/)\
 Use "Ctrl + click" or "CMD + click" to open in new tab
 
 # Table of contents    
@@ -67,6 +67,39 @@ Typography
 ## Existing features
 
 ### Landing page 
+
+The landing page itself is the login page. It is meant to encourage visitors to create an account before proceeding to the site.\
+Once logged in, users will be presented with the currently active tables.\
+Due to Django Allauth’s session handling, in case a user doesn't log out before leaving the site, the session will not be terminated
+and they will be presented with the tables as well instead of a login page again.\
+\
+Here users can create or join any table they wish.\
+To create a table they simply need to locate the creation button, and a modal will be presented to name and describe the table.\
+\
+While it is possible to visit this page without logging in, the creation button is hidden, until the user is logged in.\
+This is to ensure only verified users can create new tables.\
+Table join buttons remain visible, instead they redirect to the login page thanks to Django Allauth's login required view property.\
+In this case after a successful login, the user will be redirected to the table view right after.\
+
+### Table
+
+Each active table will have a separate page. On this page users can have a conversation with each other.\
+Users can add replies using the button on the bottom. They can also update their comments easily.\
+Tables can be deactivated only by the user who created them, and the corresponding button is visible exclusively to the creator.\
+
+### Navigation bars
+
+The footer element is positioned and fixed at the bottom of the page.\
+The element provides links to social media platforms, namely in order Facebook, X, Google and Github.\
+
+On top is the navigation bar. It is positioned and fixed to the top of the screen.\
+Once a user is logged in, the bar will be populated with a dropdown menu, greeting the user.\
+In this menu the user can logout and access their information to update.\
+If the site is currently displaying a table page, a back button is added so the users can easily navigate back to all tables.
+
+### Account management
+
+On this page users can update their details, or delete their account.
 
 ## Future features consideration
 
