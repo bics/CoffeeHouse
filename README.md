@@ -38,7 +38,7 @@ Use "Ctrl + click" or "CMD + click" to open in new tab
 Colour Scheme
 
 Main colours used on the website\
-![Color palette](static\assets\images\colour_palette.png)
+![Color palette](static/assets/images/colour_palette.png)
 
 Typography
 
