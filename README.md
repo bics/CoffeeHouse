@@ -154,15 +154,7 @@ This 3rd party media storage service is used to store user-uploaded images.
 
 # Testing
 
-## Manual testing
-
-## Automated testing
-
-### HTML validation
-
-### CSS validation 
-
-### JS validation
+Testing is extracted to it's own document, [TESTING]()
 
 # Deployment
 
