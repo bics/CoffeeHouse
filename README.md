@@ -99,17 +99,58 @@ If the site is currently displaying a table page, a back button is added so the 
 
 ### Account management
 
-On this page users can update their details, or delete their account.
+On this page users can update their details, initiate password reset, or delete their account.\
+Users can upload their own images as well. This field is optional. If the user has not uploaded an image, they will be assigned  with one of the 5 default avatar images currently available.
+
+### Django Allauth's core features
+
+The project is integrated with Django Allauth’s core features. This enables easy user management and provides essential security protections.\
+It is used for user creation, user login, user logout, and password management.\
+This ensures users have accurate details and enforces strong password usage.
+
+### Google SMTP service
+
+A dedicated Google account was created and modified to be the messaging client for the project.\
+This email service was then integrated to support Django Allauth features.\
+Currently the password reset workflow uses this service.
+
+### Cloudinary
+
+This 3rd party media storage service is used to store user-uploaded images.
 
 ## Future features consideration
 
+* Verified account creation
+    Utilizing Django Allauth's core features further with the SMTP worker, email addresses can be verified.
+* User feedback can be given after the user updated their details.
+* User deletion can be made safer with prompting the user to verify their password.
+* Table images can be user uploaded images.
+* Users can upload images to comments.
+* A personalised view, where users can easily see which table they have joined.
+* Friend feature can be added for private messaging for users.
+
 # Technologies used
 
+* The core project is written in HTML5, CSS3 and Python.
 * Used [Balsamiq](https://balsamiq.com) to create wireframes.
 * Used [Visual Studio Code](https://code.visualstudio.com) as IDE.
 * Used [Github](https://github.com) to store and deploy the repository.
 * Used [Sourcetree](https://www.sourcetreeapp.com) for version control.
 * Used [Opera](https://www.opera.com), [Mozilla](https://www.mozilla.org/en-GB/) and [Chrome](https://www.google.com/intl/en_uk/chrome/) browsers and their respective developer tools for testing.
+* Used [ChatGPT](https://chatgpt.com) for debugging, code and content generation.
+* Used [W3Schools](https://www.w3schools.com) to help to understand and write codes.
+* Frequently visited [Stack Overflow](https://stackoverflow.com/questions) to understand some behaviours.
+* Used [Bootstrap](https://getbootstrap.com) as css.
+* Used [Font Awesome](https://fontawesome.com) to display footer elements.
+* Used [Freepik](https://www.freepik.com) to acquire free images.
+* Used [Krita](https://krita.org/en/) and [Canva](https://www.canva.com) for modifying pictures.
+* Used [Coolors](https://coolors.co) to create color palette.
+* Used [Microsoft Windows](https://www.microsoft.com/en-gb/windows?r=1) in-built **Snippet** tool to capture images.
+* Used [Cloudinary](https://cloudinary.com) to store media images.
+* Used [PostgreSQL](https://www.postgresql.org) as database.
+* Used [Heroku](https://www.heroku.com) as hosting platform.
+* Used [Google](https://www.google.com) as SMTP service provider.
+
 
 # Testing
 
