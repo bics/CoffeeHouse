@@ -1,6 +1,6 @@
 # CoffeeHouse
 
-[Deployed site](https://bics.github.io/MineSweeper/)
+[Deployed site](http://coffee-house-4393250a7201.herokuapp.com/)
 
 # Table of contents    
 
@@ -20,17 +20,24 @@
 
 ### User stories
 * First Time Visitor Goals
+    * First time users should be able to understand the purpose of the site.
+    * They should be able to navigate the site without any issue.
+    * The site should encourage users to interact with it.
 
 * Returning Visitor Goals
+    * Returning visitors should be able to notice any changes on the website.
+    * The site should still encourage users to interact with it.
 
 * Frequent User Goals
+    * Frequent users should be able to take a break and have enjoyable conversation with the community.
+    * They may spend some time looking at other users’ tables.
 
 ### Design
 
 Colour Scheme
 
 Main colours used on the website\
-![Color palette]()
+![Color palette](static\assets\images\colour_palette.png)
 
 Typography
 
@@ -38,25 +45,27 @@ Typography
 <details>
 <summary>Mobile</summary>
 
-![Mobile wireframe](/assets/images/Wireframe_Mobile.png)
+![Mobile wireframe](static/assets/images/Wireframe_Mobile.png)
 
 </details>
 <details>
 <summary>Tablet</summary>
 
-![Tablet wireframe](/assets/images/Wireframe_Tablet.png)
+![Tablet wireframe](static/assets/images/Wireframe_Tablet.png)
 
 </details>
 <details>
 <summary>Desktop</summary>
 
-![Desktop wireframe](/assets/images/Wireframe_Desktop.png)
+![Desktop wireframe](static/assets/images/Wireframe_Desktop.png)
 
 </details>
 
 # Features
 
 ## Existing features
+
+### Landing page 
 
 ## Future features consideration
 
