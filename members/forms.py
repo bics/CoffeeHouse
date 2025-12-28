@@ -10,6 +10,7 @@ class AccountUpdateForm(forms.ModelForm):
         widgets = {
             "username": forms.TextInput(attrs={'class':'form-control mb-2'}),
             "email": forms.EmailInput(attrs={'class':'form-control mb-2'}),
+            "avatar": forms.FileInput(attrs={'accept':'image/png, image/jpeg, image/jpg'}),
         }
         help_texts = {
             "avatar": "Optional. Your image will be stored securely using Cloudinary to display your profile picture.",

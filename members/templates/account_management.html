@@ -30,7 +30,7 @@ Coffee House | {{ user.username }}
             <img class="img-fluid table-image mb-2 display-avatar" src="{{ user.default_avatar }}" alt="Avatar"><br>
             {% endif %}
             <label for="{{ form.avatar.name }}">Replace Avatar</label>
-            <input type="file" name="{{ form.avatar.name }}" id="{{ form.avatar.id_for_label }}" class="form-control " />   
+            <input type="file" accept="image/png, image/jpeg, image/jpg" name="{{ form.avatar.name }}" id="{{ form.avatar.id_for_label }}" class="form-control " />   
             <!--Help text display generated with ChatGPT-->     
             {% if form.avatar.help_text %}
             <small class="form-text text-muted">
