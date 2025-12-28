@@ -166,13 +166,46 @@ This 3rd party media storage service is used to store user-uploaded images.
 
 # Deployment
 
-### Github pages
+### Heroku
+The project is deployed to [Heroku](https://www.heroku.com). In order to achieve this the following steps were taken:\
+1. Sign into [Heroku](https://www.heroku.com).
+2. Start creating a new app.
+3. Use Github as preferred deployment method. 
+4. Connect to your Github account, and connect the corresponding repository.
+5. Setup the reqiured environment variables.
+    * DATABASE_URL
+    * env_email_host
+    * env_email_password
+    * env_email_default
+    * CLOUDINARY_URL
+6. Once it successfully connected select a branch to deploy and hit "Deploy branch".
 
 ### Forking a repository
 
+1. Sign into [Github](https://github.com/) (can be done later).
+2. On [Github](https://github.com/) locate the [Coffeehouse](https://github.com/bics/CoffeeHouse) repository.
+3. On the top right hand side click on the "Fork" option.
+4. Sign into [Github](https://github.com/) (not needed if step 1. was taken).
+5. The repository should be present under your account's repositories.
+
 ### Download local repository
 
+1. Navigate to the [Coffeehouse](https://github.com/bics/CoffeeHouse) repository.
+2. On the right side select the "Code" dropdown menu.
+3. Download the repository as a .zip file.
+4. Extract the downloaded file.
+5. Open up your preferred IDE and add the extracted folder as a project.
+
 ### Clone a repository with Sourcetree
+
+1. Import SSH key. If SSH key already imported skip these steps
+    1. Acquire the SSH key, and password for this repository.
+    2. Locate the "Tools" menu, and select the "Create or import SSH keys" option.
+    3. In the dialog select "Load" and locate the acquired SSH key.
+    4. If prompted sign in to [Github](https://github.com/) account and enter the password.
+2. Click on the "+" icon to add a local repository.
+3. Select the "Remote" option on the top navigation bar.
+4. Search for the [Minesweeper](https://github.com/bics/MineSweeper) repository and hit clone.
 
 # Credits
     * Gitignore generated via [ChatGPT](https://chatgpt.com)
