@@ -79,13 +79,13 @@ To create a table they simply need to locate the creation button, and a modal wi
 While it is possible to visit this page without logging in, the creation button is hidden, until the user is logged in.\
 This is to ensure only verified users can create new tables.\
 Table join buttons remain visible, instead they redirect to the login page thanks to Django Allauth's login required view property.\
-In this case after a successful login, the user will be redirected to the table view right after.\
+In this case after a successful login, the user will be redirected to the table view right after.
 
 ### Table
 
 Each active table will have a separate page. On this page users can have a conversation with each other.\
 Users can add replies using the button on the bottom. They can also update their comments easily.\
-Tables can be deactivated only by the user who created them, and the corresponding button is visible exclusively to the creator.\
+Tables can be deactivated only by the user who created them, and the corresponding button is visible exclusively to the creator.
 
 ### Navigation bars
 
