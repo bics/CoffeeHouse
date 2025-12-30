@@ -11,10 +11,12 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+
 # Snippet taken from Code Institute material
 import os
 import dj_database_url
-if os.path.isfile('env.py'):
+
+if os.path.isfile("env.py"):
     import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,63 +31,62 @@ SECRET_KEY = os.environ.get("SECRET_KEY_env")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com',
-                 '127.0.0.1']
+ALLOWED_HOSTS = [".herokuapp.com", "127.0.0.1"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'members',
-    'coffeetables',
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "members",
+    "coffeetables",
     "cloudinary",
     "cloudinary_storage",
     # Below 4 entries taken from Code Institute material
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+    "django.contrib.sites",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
     # Snippet taken from W3Dschools
     # https://www.w3schools.com/django/django_static_whitenoise.php
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     # Snippet taken from Code Institute material
-    'allauth.account.middleware.AccountMiddleware',
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
-ROOT_URLCONF = 'coffeehouse.urls'
+ROOT_URLCONF = "coffeehouse.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [BASE_DIR / "templates"],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'coffeehouse.wsgi.application'
+WSGI_APPLICATION = "coffeehouse.wsgi.application"
 
 
 # Database
@@ -100,9 +101,7 @@ WSGI_APPLICATION = 'coffeehouse.wsgi.application'
 
 
 # Snippet taken from Code Institute material
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
+DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
 
 AUTH_USER_MODEL = "members.CoffeeDrinker"
 
@@ -111,31 +110,25 @@ AUTH_USER_MODEL = "members.CoffeeDrinker"
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': (
-            'django.contrib.auth.'
-            'password_validation.'
-            'UserAttributeSimilarityValidator'
+        "NAME": (
+            "django.contrib.auth."
+            "password_validation."
+            "UserAttributeSimilarityValidator"
         ),
     },
     {
-        'NAME': (
-            'django.contrib.auth.'
-            'password_validation.'
-            'MinimumLengthValidator'
+        "NAME": (
+            "django.contrib.auth." "password_validation." "MinimumLengthValidator"
         ),
     },
     {
-        'NAME': (
-            'django.contrib.auth.'
-            'password_validation.'
-            'CommonPasswordValidator'
+        "NAME": (
+            "django.contrib.auth." "password_validation." "CommonPasswordValidator"
         ),
     },
     {
-        'NAME': (
-            'django.contrib.auth.'
-            'password_validation.'
-            'NumericPasswordValidator'
+        "NAME": (
+            "django.contrib.auth." "password_validation." "NumericPasswordValidator"
         ),
     },
 ]
@@ -144,9 +137,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -156,17 +149,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "static/"
 
 # snippet taken from W3Dschools
 # https://www.w3schools.com/django/django_collect_static_files.php
-STATIC_ROOT = BASE_DIR / 'productionfiles'
+STATIC_ROOT = BASE_DIR / "productionfiles"
 
 # snippet taken from W3Dschools
 # https://www.w3schools.com/django/django_add_global_static_files.php
-STATICFILES_DIRS = [
-    BASE_DIR / 'static'
-]
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Cloudinary settings set up using ChatGPT
 STORAGES = {
@@ -179,26 +170,26 @@ STORAGES = {
 }
 
 # Media locations referenced following Codemy tutorial
-MEDIA_URL = '/media/'
+MEDIA_URL = "/media/"
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Allauth fields
 # Fields are taken from Code Institute material and ChatGPT
 
 SITE_ID = 1
-LOGIN_REDIRECT_URL = 'tables'
+LOGIN_REDIRECT_URL = "tables"
 ACCOUNT_LOGOUT_REDIRECT_URL = "account_login"
 
-ACCOUNT_LOGIN_METHODS = {"username", "email"}   # username/email login
-ACCOUNT_SIGNUP_FIELDS = ['email*', 'username*', 'password1*', 'password2*']
-ACCOUNT_EMAIL_VERIFICATION = "none"       # or "mandatory" if you set up SMTP
-ACCOUNT_LOGOUT_ON_GET = True              # optional convenience
+ACCOUNT_LOGIN_METHODS = {"username", "email"}  # username/email login
+ACCOUNT_SIGNUP_FIELDS = ["email*", "username*", "password1*", "password2*"]
+ACCOUNT_EMAIL_VERIFICATION = "none"  # or "mandatory" if you set up SMTP
+ACCOUNT_LOGOUT_ON_GET = True  # optional convenience
 ACCOUNT_SESSION_REMEMBER = True
 
 ACCOUNT_FORMS = {
@@ -214,8 +205,8 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 # SMTP fields generated using ChatGPT
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get("env_email_host")

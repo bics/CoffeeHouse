@@ -6,31 +6,32 @@ from django.db import IntegrityError
 
 # Create your views here.
 
+
 def account_management(request):
     if request.method == "POST":
-        form =  AccountUpdateForm(request.POST, request.FILES, instance=request.user)
+        form = AccountUpdateForm(request.POST, request.FILES, instance=request.user)
         if form.is_valid():
             form.save()
             messages.success(request, "Your details have been updated.")
-            return redirect('account_management')
+            return redirect("account_management")
     else:
         form = AccountUpdateForm(instance=request.user)
-    return render(request, 'account_management.html', { "form": form})
+    return render(request, "account_management.html", {"form": form})
+
 
 def user_deletion(request):
     if request.method == "POST":
         # Try-catch logic generated using ChatGPT
         try:
             user = request.user
-            logout(request)      # end session first
-            user.delete()        # then delete user
+            logout(request)  # end session first
+            user.delete()  # then delete user
             messages.success(request, "Your account has been deleted.")
             return redirect("account_login")  # or a "goodbye" page
         except IntegrityError:
             messages.error(
-                request,
-                "Your account cannot be deleted because it still owns content."
+                request, "Your account cannot be deleted because it still owns content."
             )
             return redirect("account_management")
 
-    return render(request, 'user_deletion.html')
+    return render(request, "user_deletion.html")

@@ -4,20 +4,27 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .models import CoffeeDrinker
 
+
 # Register your models here.
 @admin.register(CoffeeDrinker)
 class CoffeeDrinkerAdmin(UserAdmin):
-    
+
     # For editing existing users
     fieldsets = UserAdmin.fieldsets + (
-        ('avatar', {
-            'fields': ('avatar', 'default_avatar'),
-        }),
+        (
+            "avatar",
+            {
+                "fields": ("avatar", "default_avatar"),
+            },
+        ),
     )
 
     # For creating new users (the "Add user" form)
     add_fieldsets = UserAdmin.add_fieldsets + (
-        ('avatar', {
-            'fields': ('avatar', 'default_avatar'),
-        }),
+        (
+            "avatar",
+            {
+                "fields": ("avatar", "default_avatar"),
+            },
+        ),
     )
