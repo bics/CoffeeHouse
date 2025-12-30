@@ -79,6 +79,15 @@ Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.or
     2. Using correct id for label.
     3. Removed aria-describedby from form.
 
+### User deletion page:
+* During validation a couple error were flagged:
+    * Element p not allowed as child of element strong in this context. (Suppressing further errors from this subtree.)
+    * Bad value for attribute action on element form: Must be non-empty.
+
+    Steps taken:
+    1. Removed unused action attribute.
+    2. Inverted p and strong elements.
+
 ### HTML validation
 
 ### CSS validation 

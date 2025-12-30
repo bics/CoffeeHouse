@@ -11,9 +11,9 @@ Coffee House | {{ user.username }}
 {% block main %}
 <div class="middle-form light-background rounded text-center mb-3">
     <h5>Delete Account</h5>
-    <strong><p>This action cannot be undone.</p></strong>
+    <p><strong>This action cannot be undone.</strong></p>
     <hr>
-    <form action="" method="POST">
+    <form method="POST">
         {% csrf_token %}
         <div>    
             <p>You are about to delete your account, named:</p>
