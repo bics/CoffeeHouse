@@ -20,6 +20,8 @@ class AccountUpdateForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields["username"].required = True
         self.fields["email"].required = True
+        # Snippet taken from ChatGPT
+        self.fields["username"].help_text = ""
 
 # Forms generated using ChatGPT
 class AllauthSignupForm(SignupForm):

@@ -227,6 +227,7 @@ The project is deployed to [Heroku](https://www.heroku.com). In order to achieve
         * SMTP settings entries
         * Cloudinary settings for file uploads
         * Helper text for avatar uploads
+        * Remove aria-describedby for account update form
     * Code inspired from playlist created by Codemy.com https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy
         * 
 

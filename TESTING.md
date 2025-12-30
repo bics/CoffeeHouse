@@ -68,6 +68,17 @@ Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.or
     2. Removed unused action attribute.
     3. Removed incorrect type attribute from a element.
 
+### Account management page:
+* During validation a couple error were flagged:
+    * Bad value for attribute action on element form: Must be non-empty.
+    * The value of the for attribute of the label element must be the ID of a non-hidden form control.
+    * The aria-describedby attribute must point to an element in the same document.
+
+    Steps taken:
+    1. Removed unused action attribute.
+    2. Using correct id for label.
+    3. Removed aria-describedby from form.
+
 ### HTML validation
 
 ### CSS validation 
