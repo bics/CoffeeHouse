@@ -45,7 +45,7 @@ Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.or
     * During validation there were no errors present.
 
 3. Password reset from key page:
-    * During validation a couple error were flagged:
+    * During validation, a couple of errors were flagged::
         * Bad value for attribute action on element form: Must be non-empty.
         * End tag p implied, but there were open elements.
         * Unclosed element span.
@@ -60,7 +60,7 @@ Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.or
     * During validation there were no errors present.
 
 ### (A) Conversation page:
-* During validation a couple error were flagged:
+* During validation, a couple of errors were flagged::
     * Couple errors were flagged for aria-labelledby attribute multiple times
     * Bad value for attribute action on element form: Must be non-empty.
     * Bad value button for attribute type on element a: Subtype missing.
@@ -71,7 +71,7 @@ Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.or
     3. Removed incorrect type attribute from a element.
 
 ### Account management page:
-* During validation a couple error were flagged:
+* During validation, a couple of errors were flagged::
     * Bad value for attribute action on element form: Must be non-empty.
     * The value of the for attribute of the label element must be the ID of a non-hidden form control.
     * The aria-describedby attribute must point to an element in the same document.
@@ -82,7 +82,7 @@ Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.or
     3. Removed aria-describedby from form.
 
 ### User deletion page:
-* During validation a couple error were flagged:
+* During validation, a couple of errors were flagged::
     * Element p not allowed as child of element strong in this context. (Suppressing further errors from this subtree.)
     * Bad value for attribute action on element form: Must be non-empty.
 
@@ -97,14 +97,11 @@ Style (style.css) testing:
 
 ### Python validation
 
-#### settings.py file:
+Used [Pycodestyle](https://pycodestyle.pycqa.org/en/latest/) validator.\
+Used [Black](https://black.readthedocs.io/en/stable/?utm_source=chatgpt.com) linter to beautify codes.\
+During validation, a couple of errors were flagged::
+    * .\members\forms.py:24:89: E501 line too long (119 > 88 characters)
+    * .\members\forms.py:39:89: E501 line too long (115 > 88 characters)
+As I used an industry-standard linter with pycodestyle correctly set up to match Black’s line length, I chose to ignore the above errors.
 
-* During validation a couple error were flagged:
-    * Multiple E501 line too long (81 > 79 characters)
-    * Couple E265 block comment should start with '# '
-    * W291 trailing whitespace
 
-    Steps taken:
-    1. Broke lines into shorter ones.
-    2. Removed trailing whitespaces
-    3. Added whitespaces to '#'
