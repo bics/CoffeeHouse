@@ -31,7 +31,31 @@ Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.or
     1. Action element was populated from the input element action attribute.
     2. Orphaned elements were rendered incorrectly by Django default output. Updated form to be displayed with divs instead.
 
+### Reset password workflow pages:
+1. Reset password page:
+    * During validation 1 error was flagged:
+        * Action attribute on form was empty.
 
+    Steps taken:
+    1. Removed unused action attribute.
+
+2. Password reset done page:
+    * During validation there were no errors present.
+
+3. Password reset from key page:
+    * During validation a couple error were flagged:
+        * Bad value for attribute action on element form: Must be non-empty.
+        * End tag p implied, but there were open elements.
+        * Unclosed element span.
+        * Stray end tag span.
+        * No p element in scope but a p end tag seen.
+
+    Steps taken:
+    1. Action element was populated from the input element action attribute.
+    2. Orphaned elements were rendered incorrectly by Django default output. Updated form to be displayed with divs instead.
+
+4. Password reset from key done page:
+    * During validation there were no errors present.
 
 
 ### HTML validation
