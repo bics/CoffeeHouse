@@ -173,6 +173,7 @@ The project is deployed to [Heroku](https://www.heroku.com). In order to achieve
     * env_email_password
     * env_email_default
     * CLOUDINARY_URL
+    * SECRET_KEY_env
 6. Once it successfully connected select a branch to deploy and hit "Deploy branch".
 
 ### Forking a repository
