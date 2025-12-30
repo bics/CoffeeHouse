@@ -4,6 +4,8 @@
 
 ## Automated testing
 
+### HTML validation
+
 Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.org) and [css](https://jigsaw.w3.org/css-validator/) validation.\
 
 ### Landing page (login and tables)
@@ -87,8 +89,6 @@ Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.or
     Steps taken:
     1. Removed unused action attribute.
     2. Inverted p and strong elements.
-
-### HTML validation
 
 ### CSS validation 
 
