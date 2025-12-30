@@ -61,7 +61,7 @@ Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.or
 
 ### (A) Conversation page:
 * During validation, a couple of errors were flagged:
-    * A couple of errors were flagged for aria-labelledby attribute multiple times
+    * A couple of errors were flagged for aria-labelledby attribute multiple times.
     * Bad value for attribute action on element form: Must be non-empty.
     * Bad value button for attribute type on element a: Subtype missing.
 
@@ -78,7 +78,7 @@ Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.or
 
     Steps taken:
     1. Removed unused action attribute.
-    2. Using correct id for label.
+    2. Using correct ID for label.
     3. Removed aria-describedby from form.
 
 ### User deletion page:
@@ -90,7 +90,7 @@ Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.or
     1. Removed unused action attribute.
     2. Inverted p and strong elements.
 
-### CSS validation 
+### CSS validation
 
 Style (style.css) testing:
 * During validation there were no errors present.
