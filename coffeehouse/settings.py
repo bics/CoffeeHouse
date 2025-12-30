@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "coffeetables",
     "cloudinary",
     "cloudinary_storage",
+    "django_extensions",
     # Below 4 entries taken from Code Institute material
     "django.contrib.sites",
     "allauth",

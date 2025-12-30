@@ -152,6 +152,7 @@ This 3rd party media storage service is used to store user-uploaded images.
 * Used [Google](https://www.google.com) as SMTP service provider.
 * Used [Pycodestyle](https://pycodestyle.pycqa.org/en/latest/) to validate python files.
 * Used [Black](https://black.readthedocs.io/en/stable/?utm_source=chatgpt.com) linter to beautify python codes.
+* Used [pydotplus](https://pydotplus.readthedocs.io) to generate database diagrams.
 
 
 # Testing
