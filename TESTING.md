@@ -92,4 +92,19 @@ Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.or
 
 ### CSS validation 
 
-### JS validation
+Style (style.css) testing:
+* During validation there were no errors present.
+
+### Python validation
+
+#### settings.py file:
+
+* During validation a couple error were flagged:
+    * Multiple E501 line too long (81 > 79 characters)
+    * Couple E265 block comment should start with '# '
+    * W291 trailing whitespace
+
+    Steps taken:
+    1. Broke lines into shorter ones.
+    2. Removed trailing whitespaces
+    3. Added whitespaces to '#'

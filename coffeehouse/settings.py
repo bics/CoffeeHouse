@@ -25,10 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-=g_pbb8b-3x0&$j^qk3#avh8nq1aq$d2o7=6pj7vqb-at8$7ni'
-
+SECRET_KEY = os.environ.get("SECRET_KEY_env")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.herokuapp.com',
                  '127.0.0.1']
@@ -62,7 +61,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # Snippet taken from W3Dschools https://www.w3schools.com/django/django_static_whitenoise.php
+    # Snippet taken from W3Dschools
+    # https://www.w3schools.com/django/django_static_whitenoise.php
     'whitenoise.middleware.WhiteNoiseMiddleware',
     # Snippet taken from Code Institute material
     'allauth.account.middleware.AccountMiddleware',
@@ -111,16 +111,32 @@ AUTH_USER_MODEL = "members.CoffeeDrinker"
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': (
+            'django.contrib.auth.'
+            'password_validation.'
+            'UserAttributeSimilarityValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': (
+            'django.contrib.auth.'
+            'password_validation.'
+            'MinimumLengthValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.'
+            'password_validation.'
+            'CommonPasswordValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.'
+            'password_validation.'
+            'NumericPasswordValidator'
+        ),
     },
 ]
 
@@ -142,15 +158,17 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-# snippet taken from W3Dschools https://www.w3schools.com/django/django_collect_static_files.php
+# snippet taken from W3Dschools
+# https://www.w3schools.com/django/django_collect_static_files.php
 STATIC_ROOT = BASE_DIR / 'productionfiles'
 
-# snippet taken from W3Dschools https://www.w3schools.com/django/django_add_global_static_files.php
+# snippet taken from W3Dschools
+# https://www.w3schools.com/django/django_add_global_static_files.php
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
-#Cloudinary settings set up using ChatGPT
+# Cloudinary settings set up using ChatGPT
 STORAGES = {
     "default": {
         "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
@@ -170,7 +188,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#Allauth fields 
+# Allauth fields
 # Fields are taken from Code Institute material and ChatGPT
 
 SITE_ID = 1
