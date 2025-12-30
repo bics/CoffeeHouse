@@ -18,6 +18,21 @@ Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.or
     1. Updated aria-labelledby to point to an actual element, and added a role to the parent element.
     2. Removed unused action attribute.
 
+### Signup page:
+* During validation a couple error were flagged:
+    * Action attribute on form was empty.
+    * End tag p implied, but there were open elements.ű
+    * Unclosed element span.
+    * Stray end tag span.
+    * No p element in scope but a p end tag seen.
+    * Attribute action not allowed on element input at this point.
+
+    Steps taken:
+    1. Action element was populated from the input element action attribute.
+    2. Orphaned elements were rendered incorrectly by Django default output. Updated form to be displayed with divs instead.
+
+
+
 
 ### HTML validation
 
