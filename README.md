@@ -150,6 +150,8 @@ This 3rd party media storage service is used to store user-uploaded images.
 * Used [PostgreSQL](https://www.postgresql.org) as database.
 * Used [Heroku](https://www.heroku.com) as hosting platform.
 * Used [Google](https://www.google.com) as SMTP service provider.
+* Used [Pycodestyle](https://pycodestyle.pycqa.org/en/latest/) to validate python files.
+* Used [Black](https://black.readthedocs.io/en/stable/?utm_source=chatgpt.com) linter to beautify python codes.
 
 
 # Testing
