@@ -61,7 +61,7 @@ Coffee House | {{table.name}}
         </div>
 
         <div>
-            <div class="modal fade" id="updateReplyModal-{{ reply.id }}" tabindex="-1" aria-labelledby="Edit a reply modal"
+            <div class="modal fade" id="updateReplyModal-{{ reply.id }}" tabindex="-1"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content light-background">
@@ -69,7 +69,7 @@ Coffee House | {{table.name}}
                             <h5 class="modal-title color-espresso">Send a Reply</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <form action="" method="POST">
+                        <form method="POST">
                             <div class="modal-body">
                                 {% csrf_token %}
                                 <input type="hidden" name="reply_id" value="{{ reply.id }}">
@@ -98,14 +98,14 @@ Coffee House | {{table.name}}
 </div>
 
 <div>
-    <div class="modal fade" id="replyModal" tabindex="-1" aria-labelledby="Send a reply modal" aria-hidden="true">
+    <div class="modal fade" id="replyModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content light-background">
                 <div class="modal-header espresso-border-color">
-                    <h5 class="modal-title color-espresso">Send a Reply</h5>
+                    <h5 class="modal-title color-espresso" >Send a Reply</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="" method="POST">
+                <form method="POST">
                     <div class="modal-body">
                         {% csrf_token %}
                         {{ reply_form.as_p}}
@@ -120,7 +120,7 @@ Coffee House | {{table.name}}
 </div>
 
 <div>
-    <div class="modal fade" id="closeModal" tabindex="-1" aria-labelledby="Close the table modal" aria-hidden="true">
+    <div class="modal fade" id="closeModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content light-background">
                 <div class="modal-header espresso-border-color">
@@ -133,7 +133,7 @@ Coffee House | {{table.name}}
                 <div class="modal-footer espresso-border-color">
                     <button class="btn btn-warning m-2 close" data-bs-dismiss="modal"
                         aria-label="Cancel">Cancel</button>
-                    <a href="{% url 'close_table' table.id %}" type="button" class="btn btn-danger m-2">Close Table</a>
+                    <a href="{% url 'close_table' table.id %}" class="btn btn-danger m-2">Close Table</a>
                 </div>
             </div>
         </div>

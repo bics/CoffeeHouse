@@ -15,7 +15,7 @@ Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.or
     * Action attribute on form was empty.
 
     Steps taken:
-    1. Updated aria-labelledby to point to an actual element, and added a role to the parent element.
+    1. Removed aria-labelledby.
     2. Removed unused action attribute.
 
 ### Signup page:
@@ -57,6 +57,16 @@ Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.or
 4. Password reset from key done page:
     * During validation there were no errors present.
 
+### (A) Conversation page:
+* During validation a couple error were flagged:
+    * Couple errors were flagged for aria-labelledby attribute multiple times
+    * Bad value for attribute action on element form: Must be non-empty.
+    * Bad value button for attribute type on element a: Subtype missing.
+
+    Steps taken:
+    1. Removed aria-labelledby.
+    2. Removed unused action attribute.
+    3. Removed incorrect type attribute from a element.
 
 ### HTML validation
 
