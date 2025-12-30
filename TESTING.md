@@ -6,7 +6,7 @@
 
 ### HTML validation
 
-Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.org) and [css](https://jigsaw.w3.org/css-validator/) validation.\
+Used [W3C](https://www.w3.org) validator for both [html](https://validator.w3.org) and [css](https://jigsaw.w3.org/css-validator/) validation.
 
 ### Landing page (login and tables)
 1. Login page:
@@ -99,9 +99,9 @@ Style (style.css) testing:
 
 Used [Pycodestyle](https://pycodestyle.pycqa.org/en/latest/) validator.\
 Used [Black](https://black.readthedocs.io/en/stable/?utm_source=chatgpt.com) linter to beautify codes.\
-During validation, a couple of errors were flagged::
-    * .\members\forms.py:24:89: E501 line too long (119 > 88 characters)
-    * .\members\forms.py:39:89: E501 line too long (115 > 88 characters)
+During validation, a couple of errors were flagged:
+* .\members\forms.py:24:89: E501 line too long (119 > 88 characters)
+* .\members\forms.py:39:89: E501 line too long (115 > 88 characters)
 As I used an industry-standard linter with pycodestyle correctly set up to match Black’s line length, I chose to ignore the above errors.
 
 
