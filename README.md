@@ -42,6 +42,8 @@ Main colours used on the website\
 
 Typography
 
+* Segoe Print is used with a fallback to Calibri first and then to sans-serif.
+
 ### Wireframes
 <details>
 <summary>Mobile</summary>
@@ -153,11 +155,12 @@ This 3rd party media storage service is used to store user-uploaded images.
 * Used [Pycodestyle](https://pycodestyle.pycqa.org/en/latest/) to validate python files.
 * Used [Black](https://black.readthedocs.io/en/stable/?utm_source=chatgpt.com) linter to beautify python codes.
 * Used [pydotplus](https://pydotplus.readthedocs.io) to generate database diagrams.
+* Used [Wordmark](https://wordmark.it) to select fonts.
 
 
 # Testing
 
-Testing is extracted to it's own document, [TESTING]()
+Testing is extracted to it's own document, [TESTING](https://github.com/bics/CoffeeHouse/blob/main/TESTING.md)
 
 # Deployment
 

@@ -7,6 +7,7 @@
 
 *{
     color: var(--espresso-colour);
+    font-family: "Segoe Print", "Calibri", sans-serif;
 }
 
 header {
