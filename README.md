@@ -201,7 +201,7 @@ The project is deployed to [Heroku](https://www.heroku.com). In order to achieve
     4. If prompted sign in to [Github](https://github.com/) account and enter the password.
 2. Click on the "+" icon to add a local repository.
 3. Select the "Remote" option on the top navigation bar.
-4. Search for the [Minesweeper](https://github.com/bics/MineSweeper) repository and hit clone.
+4. Search for the [Coffeehouse](https://github.com/bics/CoffeeHouse) repository and hit clone.
 
 # Credits
     * Gitignore generated via [ChatGPT](https://chatgpt.com)
