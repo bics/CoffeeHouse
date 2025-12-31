@@ -6,10 +6,12 @@ Coffee House | {{table.name}}
 {% endblock %}
 
 {% block nav %}
+<!--Back button for navbar-->
 <a href="{% url 'tables' %}" class="nav-link coral-color align-self-center">Back to Tables</a>
 {% endblock %}
 
 {% block main %}
+<!--Table content itself-->
 <div class="dark-background container-md mb-3">
     <div class="container-fluid text-center">
         <h1 class="coral-color">{{table.name}}</h1>
@@ -23,12 +25,14 @@ Coffee House | {{table.name}}
             <h5>There are no replies yet.</h5>
         </div>
         {% else %}
+        <!--Each reply will be displayed from here-->
         {% for reply in replies %}
         <!-- Code block taken from official Bootstrap documentation for cards https://getbootstrap.com/docs/5.3/components/card/-->
         <div class="card mb-3 light-background">
             <div class="row g-0">
                 <div class="col-md-2">
                     <!--Code block generated using ChatGPT-->
+                    <!--Only display valid images (assuming urls are correct)-->
                     {% if reply.createdBy.avatar %}
                     <img src="{{ reply.createdBy.avatar.url }}" class="img-fluid rounded-start" alt="avatar">
                     {% elif reply.createdBy.default_avatar %}
@@ -50,6 +54,7 @@ Coffee House | {{table.name}}
                         </div>
                         <hr>
                         <p class="card-text color-espresso">{{reply.message}}</p>
+                        <!--Showing if reply is edited-->
                         {% if reply.isEdited %}
                         <p class="card-text"><small class="text-body-secondary">Last edited at: {{reply.timeEdited}}</small></p>
                         {% else %}
@@ -60,6 +65,7 @@ Coffee House | {{table.name}}
             </div>
         </div>
 
+        <!--Modal for updating a reply-->
         <div>
             <div class="modal fade" id="updateReplyModal-{{ reply.id }}" tabindex="-1"
                 aria-hidden="true">
@@ -90,6 +96,7 @@ Coffee House | {{table.name}}
     <div class="container-fluid text-center">
         <button data-bs-toggle="modal" data-bs-target="#replyModal" class="btn btn-warning m-2">Reply</button>
 
+        <!--Table "deletion" button, should onyl be visible to creator-->
         {% if user.id is table.createdBy.id %}
         <br>
         <button class="btn btn-danger m-2" data-bs-toggle="modal" data-bs-target="#closeModal">Close Table</button>
@@ -97,6 +104,7 @@ Coffee House | {{table.name}}
     </div>
 </div>
 
+<!--Confirmation to table "deletion"-->
 <div>
     <div class="modal fade" id="replyModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
