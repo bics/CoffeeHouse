@@ -11,8 +11,6 @@ Use "Ctrl + click" or "CMD + click" to open in new tab
     2. [Future Features Consideration](#future-features-consideration)
 3. [Technologies used](#technologies-used)
 4. [Testing](#testing)
-    1. [Manual Testing](#manual-testing)
-    2. [Automated Testing](#automated-testing)
 5. [Deployment](#deployment)
 6. [Credits](#credits)
 7. [Acknowledgements](#acknowledgements)
@@ -74,9 +72,15 @@ The landing page itself is the login page. It is meant to encourage visitors to 
 Once logged in, users will be presented with the currently active tables.\
 Due to Django Allauth’s session handling, in case a user doesn't log out before leaving the site, the session will not be terminated
 and they will be presented with the tables as well instead of a login page again.\
+
+[Tables](static/assets/images/tables_image.PNG)
+
 \
 Here users can create or join any table they wish.\
 To create a table they simply need to locate the creation button, and a modal will be presented to name and describe the table.\
+
+[Table creation](static/assets/images/table_creation_image.PNG)
+
 \
 While it is possible to visit this page without logging in, the creation button is hidden, until the user is logged in.\
 This is to ensure only verified users can create new tables.\
@@ -88,6 +92,8 @@ In this case after a successful login, the user will be redirected to the table 
 Each active table will have a separate page. On this page users can have a conversation with each other.\
 Users can add replies using the button on the bottom. They can also update their comments easily.\
 Tables can be deactivated only by the user who created them, and the corresponding button is visible exclusively to the creator.
+
+[Conversation](static/assets/images/conversation_image.PNG)
 
 ### Navigation bars
 
@@ -104,6 +110,8 @@ If the site is currently displaying a table page, a back button is added so the 
 On this page users can update their details, initiate password reset, or delete their account.\
 Users can upload their own images as well. This field is optional. If the user has not uploaded an image, they will be assigned  with one of the 5 default avatar images currently available.
 
+[Account management](static/assets/images/account_management_image.PNG)
+
 ### Django Allauth's core features
 
 The project is integrated with Django Allauth’s core features. This enables easy user management and provides essential security protections.\
@@ -116,9 +124,13 @@ A dedicated Google account was created and modified to be the messaging client f
 This email service was then integrated to support Django Allauth features.\
 Currently the password reset workflow uses this service.
 
+[Password reset email](static/assets/images/password_reset_email.PNG)
+
 ### Cloudinary
 
 This 3rd party media storage service is used to store user-uploaded images.
+
+[Cloudinary image](static/assets/images/cloudinary_image.PNG)
 
 ## Future features consideration
 
