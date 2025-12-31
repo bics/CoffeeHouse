@@ -44,7 +44,7 @@ def tables(request):
 # View partially generated using ChatGPT
 def conversation(request, pk):
     table = CoffeeTable.objects.get(pk=pk)
-    replies = table.replies.all()
+    replies = table.replies.all().order_by("time")
 
     reply_form = ReplyForm()
     update_reply_form = UpdateReplyForm()
