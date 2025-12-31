@@ -257,7 +257,7 @@ avatars.jpg : https://www.freepik.com/free-vector/profile-icons-pack-hand-drawn-
 
 empty_avatar : https://www.freepik.com/free-vector/blank-user-circles_134996379.htm#fromView=search&page=1&position=1&uuid=f8d57935-e0cc-4c71-9735-a9e8336ee67e&query=empty+avatar
 
-* favicon by [catalyststuff](https://www.freepik.com/free-vector/cute-sleepy-mug-with-coffee-cartoon-icon-illustration_12158347.htm#fromView=search&page=1&position=13&uuid=55fd4fe4-90b3-4675-bd30-bde1c81a4b13&query=coffe+mug)
+* favicon by [catalyststuff](https://www.freepik.com/free-vector/cute-sleepy-mug-with-coffee-cartoon-icon-illustration_12158347.htm#fromView=search&page=1&position=13&uuid=55fd4fe4-90b3-4675-bd30-bde1c81a4b13&query=coffe+mug) modified with ChatGPT
 
 # Acknowledgements
 
