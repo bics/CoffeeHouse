@@ -13,6 +13,16 @@ Issues found and steps taken:
 
 * Login was not working with email address.
     * Updated login method in settings, added core authentication services.
+* On Mozilla elements were not centered.
+    * Using devtools, styling sheet showed the main container element were missing flex properties.
+
+### Account signup/management
+
+* Visually tested all elements are in place.
+* Devtools were used to simulate different devices and ensure page is responsive.
+* Tested with both correct and incorrect inputs.
+* Tested all links on page.
+
 
 ## Automated testing
 

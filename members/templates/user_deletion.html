@@ -9,22 +9,24 @@ Coffee House | {{ user.username }}
 {% endblock %}
 
 {% block main %}
-<div class="middle-form light-background rounded text-center mb-3">
-    <h5>Delete Account</h5>
-    <p><strong>This action cannot be undone.</strong></p>
-    <hr>
-    <form method="POST">
-        {% csrf_token %}
-        <div>    
-            <p>You are about to delete your account, named:</p>
-            <p class="text-danger">{{user.username}}</p>
-            <p>Are you sure?</p>
-            <hr>
-        </div>
-        <div class="modal-footer d-flex justify-content-between">
-            <a href="{% url 'account_management' %}" class="btn btn-secondary">Back</a>
-            <button type="submit" class="btn btn-danger">Delete</button>
-        </div>
-    </form>
+<div class="container d-flex justify-content-center">
+    <div class="middle-form light-background rounded text-center mb-3">
+        <h5>Delete Account</h5>
+        <p><strong>This action cannot be undone.</strong></p>
+        <hr>
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+                <p>You are about to delete your account, named:</p>
+                <p class="text-danger">{{user.username}}</p>
+                <p>Are you sure?</p>
+                <hr>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+                <a href="{% url 'account_management' %}" class="btn btn-secondary">Back</a>
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </div>
+        </form>
+    </div>
 </div>
 {% endblock %}
