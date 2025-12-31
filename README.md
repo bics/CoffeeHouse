@@ -73,13 +73,13 @@ Once logged in, users will be presented with the currently active tables.\
 Due to Django Allauth’s session handling, in case a user doesn't log out before leaving the site, the session will not be terminated
 and they will be presented with the tables as well instead of a login page again.\
 
-[Tables](static/assets/images/tables_image.PNG)
+![Tables](static/assets/images/tables_image.PNG)
 
 \
 Here users can create or join any table they wish.\
 To create a table they simply need to locate the creation button, and a modal will be presented to name and describe the table.\
 
-[Table creation](static/assets/images/table_creation_image.PNG)
+![Table creation](static/assets/images/table_creation_image.PNG)
 
 \
 While it is possible to visit this page without logging in, the creation button is hidden, until the user is logged in.\
@@ -93,7 +93,7 @@ Each active table will have a separate page. On this page users can have a conve
 Users can add replies using the button on the bottom. They can also update their comments easily.\
 Tables can be deactivated only by the user who created them, and the corresponding button is visible exclusively to the creator.
 
-[Conversation](static/assets/images/conversation_image.PNG)
+![Conversation](static/assets/images/conversation_image.PNG)
 
 ### Navigation bars
 
@@ -110,7 +110,7 @@ If the site is currently displaying a table page, a back button is added so the 
 On this page users can update their details, initiate password reset, or delete their account.\
 Users can upload their own images as well. This field is optional. If the user has not uploaded an image, they will be assigned  with one of the 5 default avatar images currently available.
 
-[Account management](static/assets/images/account_management_image.PNG)
+![Account management](static/assets/images/account_management_image.PNG)
 
 ### Django Allauth's core features
 
@@ -124,19 +124,19 @@ A dedicated Google account was created and modified to be the messaging client f
 This email service was then integrated to support Django Allauth features.\
 Currently the password reset workflow uses this service.
 
-[Password reset email](static/assets/images/password_reset_email.PNG)
+![Password reset email](static/assets/images/password_reset_email.PNG)
 
 ### Cloudinary
 
 This 3rd party media storage service is used to store user-uploaded images.
 
-[Cloudinary image](static/assets/images/cloudinary_image.PNG)
+![Cloudinary image](static/assets/images/cloudinary_image.PNG)
 
 ## Future features consideration
 
 * Verified account creation
     Utilizing Django Allauth's core features further with the SMTP worker, email addresses can be verified.
-* User feedback can be given after the user updated their details.
+* More user feedback can be given after the user updated their details.
 * User deletion can be made safer with prompting the user to verify their password.
 * Table images can be user uploaded images.
 * Users can upload images to comments.
@@ -227,9 +227,9 @@ The project is deployed to [Heroku](https://www.heroku.com). In order to achieve
 
 ### Code
 
-* Modal code block taken and modified from official Bootsrap documentation https://getbootstrap.com/docs/5.0/components/modal/
-* Card code block taken from official Bootstrap documentation for cards https://getbootstrap.com/docs/5.3/components/card/
-* Dropdown menu code block taken from official Bootstrap documentation for dropdowns https://getbootstrap.com/docs/4.0/components/dropdowns/
+* Modal code block taken and modified from official [Bootsrap documentation](https://getbootstrap.com/docs/5.0/components/modal/)
+* Card code block taken from official [Bootstrap documentation](https://getbootstrap.com/docs/5.3/components/card/) for cards
+* Dropdown menu code block taken from official [Bootstrap documentation](https://getbootstrap.com/docs/4.0/components/dropdowns/) for dropdowns
 * Allauth fields taken from [Code Institute](https://learn.codeinstitute.net/dashboard) material
 * Snippets generated using [ChatGPT](https://chatgpt.com):
     * tables.html image selector for new table creation
@@ -277,11 +277,11 @@ The project is deployed to [Heroku](https://www.heroku.com). In order to achieve
 
 * empty_avatar by [juicy_fish](https://www.freepik.com/free-vector/blank-user-circles_134996379.htm#fromView=search&page=1&position=1&uuid=f8d57935-e0cc-4c71-9735-a9e8336ee67e&query=empty+avatar)
 
-* favicon by [catalyststuff](https://www.freepik.com/free-vector/cute-sleepy-mug-with-coffee-cartoon-icon-illustration_12158347.htm#fromView=search&page=1&position=13&uuid=55fd4fe4-90b3-4675-bd30-bde1c81a4b13&query=coffe+mug) modified with ChatGPT
+* favicon by [catalyststuff](https://www.freepik.com/free-vector/cute-sleepy-mug-with-coffee-cartoon-icon-illustration_12158347.htm#fromView=search&page=1&position=13&uuid=55fd4fe4-90b3-4675-bd30-bde1c81a4b13&query=coffe+mug) modified with [ChatGPT](https://chatgpt.com)
 
 # Acknowledgements
 
-Thank you to my mentor Benjamin Kavanagh for his intitial support and feedback during development.
+Thank you to my mentor Benjamin Kavanagh for his intitial support and feedback during development.\
 Thank you to Kevin Loughrey, our cohort leader, for his continuous support and feedback during development.
 
 
