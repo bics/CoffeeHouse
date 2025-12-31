@@ -276,5 +276,8 @@ The project is deployed to [Heroku](https://www.heroku.com). In order to achieve
 
 # Acknowledgements
 
+Thank you to my mentor Benjamin Kavanagh for his intitial support and feedback during development.
+Thank you to Kevin Loughrey, our cohort leader, for his continuous support and feedback during development.
+
 
 
