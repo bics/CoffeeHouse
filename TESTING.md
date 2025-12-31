@@ -22,7 +22,44 @@ Issues found and steps taken:
 * Devtools were used to simulate different devices and ensure page is responsive.
 * Tested with both correct and incorrect inputs.
 * Tested all links on page.
+* Tested password reset workflow.
+* Tested account update feature.
+* Tested account deleteion feature.
 
+Issues found and steps taken:
+* On Mozilla elements were not centered.
+    * Using devtools, styling sheet showed the main container element were missing flex properties.
+* Password reset would be done via email.
+    * Integrated SMTP email service.
+* After redeploying on Heroku, user avatars would disappear.
+    * Integrated 3rd party hosting service for profile pictures.
+
+### Tables
+
+* Visually tested all elements are in place.
+* Devtools were used to simulate different devices and ensure page is responsive.
+* Tested table creation.
+* Tested site accessibility both logged in and out.
+* Tested conversating.
+
+Issues found and steps taken:
+* Users can create a table without choosing a pic
+    * Tried adding required to the input field.
+    * Worked but no feedback given if user missed selecting an image.
+    * Updated to select the first one by default.
+* Unauthorised users could create tables
+    * Creation button only shows if a user is logged in.
+* When an account got deleted there were no mentions found.
+    * Updated modal to return username string or "Deleted user" when empty or null
+* On Opera browser hitting "Send reply" button submits the form multiple times.
+    * I remember using this function for browser based games.
+    * Tried disabling the button after submit, but sometimes completely broke the flow.
+    * Decided to leave as it is, on Mozilla there is no such thing, and I believe the feature is intended in Opera, as I chose the browser for this exact feature in the past.
+* After updating a reply the updated reply was displayed last.
+    * Returning the replies in the order they were created.
+* Noticed that deleting users on the admin page deletes all associated events.
+    * Models were updated to set their CreatedBy value to NULL when this happens.
+    * Still removes associated entries. Decided to leave as it is. Could implement an admin only disable account function, or could add a custom through model to the related foreign/many-to-many key fields.
 
 ## Automated testing
 
