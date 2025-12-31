@@ -32,7 +32,7 @@ class CoffeeTable(models.Model):
     name = models.CharField(max_length=255)
     image = models.CharField(
         blank=True
-    )  # TODO add enum for available images or from html select
+    )
     description = models.CharField(max_length=255)
     replies = models.ManyToManyField(Reply, blank=True)
     createdBy = models.ForeignKey(
