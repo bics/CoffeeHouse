@@ -219,38 +219,43 @@ The project is deployed to [Heroku](https://www.heroku.com). In order to achieve
 4. Search for the [Coffeehouse](https://github.com/bics/CoffeeHouse) repository and hit clone.
 
 # Credits
-    * Gitignore generated via [ChatGPT](https://chatgpt.com)
-    * Index.html template was copied and modified from previous [Best Barber project](https://github.com/bics/BestBarber)
-    * Used [Bootstrap](https://getbootstrap.com) as css.
+* Gitignore generated via [ChatGPT](https://chatgpt.com)
+* Base.html template was copied and modified from previous [Best Barber project](https://github.com/bics/BestBarber)
+* Used [Bootstrap](https://getbootstrap.com) as css.
+* Project is heavily inspired by [Django Wednesdays](https://youtube.com/playlist?list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy&si=KcyLr9X8-nmOfFED) created by Codemy.com
+* Registration form done following a Django tutorial by [Dave Gray](https://www.youtube.com/watch?v=DIFaOkxy6TE)
 
 ### Code
 
-    * Modal code block taken and modified from official Bootsrap documentation https://getbootstrap.com/docs/5.0/components/modal/
-    * Card code block taken from official Bootstrap documentation for cards https://getbootstrap.com/docs/5.3/components/card/
-    * Dropdown menu code block taken from official Bootstrap documentation for dropdowns https://getbootstrap.com/docs/4.0/components/dropdowns/
-    * Allauth fields taken from Code Institute material
-    * Snippets generated using Chatgpt:
-        * tables.html image selector for new table creation
-        * Styling for the above image selector
-        * Hiding form field when creating new tables
-        * Auto updating form with logged in user
-        * Conversation view
-        * Custom admin user register for site
-        * Error handling for replies, when users have no pictures
-        * Allauth settings
-        * Allauth signup form
-        * Allauth login form
-        * Account management form fields
-        * Null check for model variable
-        * Deletion view try-catch block
-        * SMTP settings entries
-        * Cloudinary settings for file uploads
-        * Helper text for avatar uploads
-        * Remove aria-describedby for account update form
-    * Code inspired from playlist created by Codemy.com https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy
-        * 
+* Modal code block taken and modified from official Bootsrap documentation https://getbootstrap.com/docs/5.0/components/modal/
+* Card code block taken from official Bootstrap documentation for cards https://getbootstrap.com/docs/5.3/components/card/
+* Dropdown menu code block taken from official Bootstrap documentation for dropdowns https://getbootstrap.com/docs/4.0/components/dropdowns/
+* Allauth fields taken from [Code Institute](https://learn.codeinstitute.net/dashboard) material
+* Snippets generated using [ChatGPT](https://chatgpt.com):
+    * tables.html image selector for new table creation
+    * Styling for the above image selector
+    * Hiding form field when creating new tables
+    * Auto updating form with logged in user
+    * Conversation view
+    * Custom admin user register for site
+    * Error handling for replies, when users have no pictures
+    * Allauth settings
+    * Allauth signup form
+    * Allauth login form
+    * Account management form fields
+    * Null check for model variable
+    * Deletion view try-catch block
+    * SMTP settings entries
+    * Cloudinary settings for file uploads
+    * Helper text for avatar uploads
+    * Remove aria-describedby for account update form
+* Code inspired from playlist created by [Codemy.com](https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy)
+* Multiple settings entry from [W3Dschools](https://www.w3schools.com)
 
 ### Content
+
+* Using core Django Allauth default messages.
+* All other content was written by me.
 
 ### Media
 
