@@ -2,6 +2,18 @@
 
 ## Manual testing
 
+### Landing page (login and tables)
+
+* Visually tested all elements are in place.
+* Devtools were used to simulate different devices and ensure page is responsive.
+* Tested all links on page.
+* Tested account login with both email and username.
+
+Issues found and steps taken:
+
+* Login was not working with email address.
+    * Updated login method in settings, added core authentication services.
+
 ## Automated testing
 
 ### HTML validation
