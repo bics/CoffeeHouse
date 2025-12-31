@@ -13,7 +13,7 @@ from django.utils import timezone
 
 # view created following tutorial made by Codemy.com
 def tables(request):
-    tables_list = CoffeeTable.objects.all()
+    tables_list = CoffeeTable.objects.all().order_by("-time")
     images_list = [
         "static/assets/images/table_images/coffee_drank.jpg",
         "static/assets/images/table_images/coffee_mug_cartoony.jpg",
