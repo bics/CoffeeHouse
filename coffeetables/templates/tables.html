@@ -49,7 +49,7 @@ Coffee House | Lobby
                         <div class="container-fluid d-flex justify-content-between">
                             <!--Code snippet partially generated using ChatGPT-->
                             {% for image in images_list %}
-                            <input type="radio" name="image" id="image-{{ forloop.counter }}" value="{{ image }}" class="d-none">
+                            <input type="radio" name="image" id="image-{{ forloop.counter }}" value="{{ image }}" class="d-none" {% if forloop.first %}checked{% endif %}>
                             <label for="image-{{ forloop.counter }}" class="image-tile"
                                 style="background-image: url('{{image}}');"></label>
                             {% endfor %}
