@@ -7,6 +7,7 @@
 
 *{
     color: var(--espresso-colour);
+    font-family: "Segoe Print", "Calibri", sans-serif;
 }
 
 header {
@@ -21,6 +22,10 @@ body {
 footer {
     width: 100%;
     bottom: 0;
+}
+
+nav a:hover, a:active, a:focus {
+    color: var(--intermediate-background-color) !important;
 }
 
 .coral-color{
@@ -42,6 +47,7 @@ footer {
 .middle-form {
     justify-self: center;
     padding: 10px;
+    width: fit-content;
 }
 
 .coffee-table{
