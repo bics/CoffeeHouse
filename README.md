@@ -9,11 +9,12 @@ Use "Ctrl + click" or "CMD + click" to open in new tab
 2. [Features](#features)
     1. [Existing Features](#existing-features)
     2. [Future Features Consideration](#future-features-consideration)
-3. [Technologies used](#technologies-used)
-4. [Testing](#testing)
-5. [Deployment](#deployment)
-6. [Credits](#credits)
-7. [Acknowledgements](#acknowledgements)
+3. [Data](#data)
+4. [Technologies used](#technologies-used)
+5. [Testing](#testing)
+6. [Deployment](#deployment)
+7. [Credits](#credits)
+8. [Acknowledgements](#acknowledgements)
 
 # UX
 
@@ -142,6 +143,42 @@ This 3rd party media storage service is used to store user-uploaded images.
 * Users can upload images to comments.
 * A personalised view, where users can easily see which table they have joined.
 * Friend feature can be added for private messaging for users.
+
+# Data
+
+![Database models](static/assets/images/DB_diagram.png)
+
+### CoffeeDrinker
+
+The main custom user model.\
+They include the base fields inherited from AbstractUser.\
+Custom fields added:
+* avatar : User uploaded image url.
+* default_avatar : Randomly selected default image.
+
+### CoffeeTable
+
+A custom made entry to store each conversation thread.\
+These are the  primary entries a user can interact.\
+Fields are:
+* name : Name given by the table creator.
+* description : Custom description given by the table creator.
+* replies : Many-to-many field to store corresponding replies.
+* createdBy : Foreign key of the user who created the instance.
+* participants : Many-to-many field to store users who participate in the thread.
+* time : Time the table is created.
+* active : Boolean field to support table deletion.
+
+### Reply
+
+A custom made entry to reference each conversation entry.\
+Fields are:
+* message : The actual message the user sent.
+* createdBy : Foreign key of the user who submitted the reply.
+* time : The time the entry was created.
+* isEdited : Boolean flag indicating whether the reply has been edited after creation.
+* history : Text field to store all previous message after altering.
+* timeEdited : Time to register the last time reply was modified.
 
 # Technologies used
 
