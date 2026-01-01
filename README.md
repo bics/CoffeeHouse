@@ -164,10 +164,23 @@ This 3rd party media storage service is used to store user-uploaded images.
 * Used [PostgreSQL](https://www.postgresql.org) as database.
 * Used [Heroku](https://www.heroku.com) as hosting platform.
 * Used [Google](https://www.google.com) as SMTP service provider.
-* Used [Pycodestyle](https://pycodestyle.pycqa.org/en/latest/) to validate python files.
-* Used [Black](https://black.readthedocs.io/en/stable/?utm_source=chatgpt.com) linter to beautify python codes.
-* Used [pydotplus](https://pydotplus.readthedocs.io) to generate database diagrams.
 * Used [Wordmark](https://wordmark.it) to select fonts.
+
+* Used the [Django web framework](https://www.djangoproject.com), with the following core technologies:
+
+| Name | Purpose |
+|------|---------|
+| Django | Core |
+| django-allauth | User management |
+| django-cloudinary-storage | Supports Cloudinary integration |
+| cloudinary | Supports Cloudinary integration |
+| pillow | Image processing helper |
+| whitenoise | Serves static files|
+| psycopg2 | PostgreSQL adapter|
+| gunicorn | Production WSGI server |
+| black | Python code formatter |
+| pycodestyle | Python code validator |
+| pydotplus | Graph and diagram generation |
 
 
 # Testing
